@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 export default function Card({
   children,
   className = '',
-  interactive = true,
   glowOnHover = false,
   ...props
 }) {
@@ -23,3 +22,4 @@ export default function Card({
     </motion.div>
   )
 }
+
