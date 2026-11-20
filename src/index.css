@@ -1,8 +1,74 @@
 @import "tailwindcss";
 
+@theme {
+  --color-dark-bg: #08090d;
+  --color-dark-surface: #0e1017;
+  --color-dark-card: #13151f;
+  --color-dark-card-hover: #191c2b;
+  --color-dark-border: rgba(255, 255, 255, 0.08);
+  --color-dark-border-hover: rgba(168, 85, 247, 0.35);
+  
+  --color-brand-purple: #a855f7;
+  --color-brand-indigo: #6366f1;
+  --color-brand-blue: #3b82f6;
+  --color-brand-cyan: #06b6d4;
+}
+
 @layer base {
-  body {
-    @apply bg-black text-gray-200 antialiased selection:bg-purple-500/30 selection:text-purple-200;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  * {
+    border-color: var(--color-dark-border);
   }
+
+  body {
+    background-color: var(--color-dark-bg);
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(168, 85, 247, 0.3);
+    color: #f3e8ff;
+  }
+}
+
+/* Custom Design System Utilities */
+.glass-panel {
+  background: rgba(19, 21, 31, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(20, 23, 35, 0.75) 0%, rgba(14, 16, 25, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 30px -4px rgba(168, 85, 247, 0.15), 0 0 15px -1px rgba(168, 85, 247, 0.1);
+  transform: translateY(-2px);
+}
+
+.glow-pill {
+  box-shadow: 0 0 20px -3px rgba(168, 85, 247, 0.25);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

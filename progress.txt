@@ -13,3 +13,20 @@
   - Configured HTML title and meta tags for Abhishek Tiwari's portfolio in `index.html`.
   - Verified production build with `npm run build` (built cleanly with zero errors).
 - Next Task: Task 2: Design System (Create color variables, define typography, establish spacing and layout, create reusable components).
+
+
+### [Iteration 2] - Task 2: Design System
+- Status: COMPLETED
+- Actions taken:
+  - Defined color palette and design tokens in `src/index.css` (dark backgrounds `#08090d`, surface `#0e1017`, card `#13151f`, accent purple `#a855f7`, indigo `#6366f1`, blue `#3b82f6`).
+  - Added modern glassmorphism utility classes (`.glass-card`, `.glass-panel`, `.glow-pill`, `.text-gradient-accent`).
+  - Implemented reusable UI components in `src/components/ui/`:
+    - `Button.jsx`: Variants (primary, secondary, outline, ghost), icon slots, external links, Framer Motion tap/hover interactions.
+    - `Card.jsx`: Glassmorphic card container with viewport entrance animation and hover lift.
+    - `Badge.jsx`: Multicolored status and skill tags (default, purple, blue, indigo, emerald, outline).
+    - `SectionHeading.jsx`: Consistent section title, eyebrow badge, gradient highlight, and subtitle.
+    - `Container.jsx`: Responsive layout container with max-width constraints.
+    - `index.js`: Clean centralized component exports.
+  - Showcased design system components in `src/App.jsx`.
+  - Verified compilation and bundle generation with `npm run build` (395ms, 0 errors).
+- Next Task: Task 3: Navigation and Hero (Implement responsive navbar, build hero section, add introduction and buttons).

@@ -1,36 +1,89 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Sparkles, Terminal } from 'lucide-react'
+import { Sparkles, ArrowRight, Download, Mail, Code2, Database, Award, Layers } from 'lucide-react'
+import { Container, Button, Card, Badge, SectionHeading } from './components/ui'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))]" />
-      
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-xl text-center space-y-6"
-      >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm">
-          <Sparkles className="w-4 h-4 text-purple-400" />
-          <span>Task 1 Initialized</span>
-        </div>
+    <div className="min-h-screen bg-[#08090d] text-gray-200 relative selection:bg-purple-500/30 selection:text-purple-200">
+      {/* Background ambient lighting */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-purple-600/10 blur-[130px] rounded-full" />
+        <div className="absolute top-[40%] -right-40 w-[500px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full" />
+        <div className="absolute -bottom-40 -left-40 w-[600px] h-[500px] bg-indigo-600/10 blur-[140px] rounded-full" />
+      </div>
 
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-          Abhishek Tiwari Portfolio
-        </h1>
+      <main className="relative z-10 py-16 sm:py-24 space-y-20">
+        <Container>
+          <SectionHeading
+            tag="Design System Ready"
+            tagIcon={Sparkles}
+            title="Abhishek Tiwari"
+            accentTitle="Design System"
+            subtitle="Premium, dark-mode design system with typography, color tokens, and accessible reusable components."
+          />
 
-        <p className="text-gray-400 text-base sm:text-lg">
-          Data Science Student | Exploring AI, Technology & Innovation
-        </p>
+          {/* Interactive Button Showcase */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
+            <Button variant="primary" icon={ArrowRight} iconPosition="right">
+              Explore My Work
+            </Button>
+            <Button variant="secondary" icon={Download}>
+              Download Resume
+            </Button>
+            <Button variant="outline" icon={Mail}>
+              Contact Me
+            </Button>
+            <Button variant="ghost">
+              Learn More
+            </Button>
+          </div>
 
-        <div className="flex items-center justify-center gap-2 text-xs font-mono text-gray-500">
-          <Terminal className="w-3.5 h-3.5" />
-          <span>React + Vite + Tailwind CSS + Framer Motion</span>
-        </div>
-      </motion.div>
+          {/* Card & Badge Showcase */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card glowOnHover>
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                <Code2 className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Modern Typography</h3>
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                Refined hierarchy with balanced weights, responsive scales, and high-contrast text rendering.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="purple">Headings</Badge>
+                <Badge variant="default">Body Sans</Badge>
+              </div>
+            </Card>
+
+            <Card glowOnHover>
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                <Database className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Glassmorphism Cards</h3>
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                Multi-layered glass cards featuring backdrop blurs, subtle gradient borders, and soft elevation.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="blue">Backdrop Blur</Badge>
+                <Badge variant="indigo">Hover Lift</Badge>
+              </div>
+            </Card>
+
+            <Card glowOnHover>
+              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4">
+                <Layers className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Component Library</h3>
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                Modular and reusable UI building blocks crafted for clean integration across all portfolio sections.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="emerald">Accessible</Badge>
+                <Badge variant="outline">Responsive</Badge>
+              </div>
+            </Card>
+          </div>
+        </Container>
+      </main>
     </div>
   )
 }
