@@ -221,3 +221,11 @@
     - Removed "Verify Credential" buttons and placeholder credential URLs from certification cards.
     - Updated section accent title to "Course Certifications".
   - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (527ms, 0 errors).
+
+### [Update - Real Resume Upload & Download Resume Button]
+- Status: COMPLETED
+- Actions taken:
+  - Uploaded verified resume PDF to `public/Abhishek_Tiwari_Resume.pdf`, `public/resume.pdf`, and `src/assets/Abhishek_Tiwari_Resume.pdf`.
+  - Configured `resumeUrl: "/Abhishek_Tiwari_Resume.pdf"` in `src/data/portfolioData.js`.
+  - Updated Hero section CTA button from "Download CV" to "Download Resume" with direct download trigger and new-tab preview fallback.
+  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (461ms, 0 errors).

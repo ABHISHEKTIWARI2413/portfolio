@@ -18,13 +18,6 @@ export default function Hero() {
     }
   }
 
-  const handleResumeClick = (e) => {
-    if (personalInfo.resumeUrl === '#resume') {
-      e.preventDefault()
-      alert('Abhishek Tiwari\'s verified resume will be downloadable here. Resume placeholder configured as per PRD.')
-    }
-  }
-
   return (
     <section
       id="home"
@@ -81,11 +74,13 @@ export default function Hero() {
                 variant="lime"
                 size="lg"
                 href={personalInfo.resumeUrl}
-                onClick={handleResumeClick}
+                download="Abhishek_Tiwari_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 icon={ArrowDown}
                 iconPosition="right"
               >
-                Download CV
+                Download Resume
               </Button>
               <Button
                 variant="dark"

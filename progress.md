@@ -162,6 +162,12 @@ This document records the full development trajectory across all 10 iterations r
   - Added matching top-right location badge on the photo container.
   - Removed "Verify Credential" buttons and placeholder URLs from the Certifications cards.
 
+### [Update] — Real Resume Upload & Button Rename
+- **Implemented**:
+  - Uploaded verified PDF resume to `public/Abhishek_Tiwari_Resume.pdf`.
+  - Configured `resumeUrl: "/Abhishek_Tiwari_Resume.pdf"` in `src/data/portfolioData.js`.
+  - Renamed Hero CTA button from "Download CV" to "Download Resume", configuring direct download and browser preview attributes.
+
 ---
 
 ## Completion Verification

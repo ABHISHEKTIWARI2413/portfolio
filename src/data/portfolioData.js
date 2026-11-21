@@ -21,7 +21,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/tiwariabhishek19",
     email: "mailto:abhi13tiwari@gmail.com",
   },
-  resumeUrl: "#resume", // Placeholder as per PRD
+  resumeUrl: "/Abhishek_Tiwari_Resume.pdf",
 }
 
 export const navItems = [
