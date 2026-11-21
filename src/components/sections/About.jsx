@@ -6,9 +6,7 @@ import { Container, SectionHeading, Card, Button, Badge } from '../ui'
 export default function About() {
   const specialties = [
     { title: 'Web Application Platforms', count: 'Live on Vercel' },
-    { title: 'Data Analytics & Modeling', count: 'Python & SQL' },
     { title: 'Interactive 2D Games', count: 'Live on Netlify' },
-    { title: 'Machine Learning Concepts', count: 'Foundational' },
   ]
 
   return (

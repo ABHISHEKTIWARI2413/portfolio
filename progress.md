@@ -140,6 +140,12 @@ This document records the full development trajectory across all 10 iterations r
   - Applied soft gradient feathering on the lower hoodie for a seamless dark-theme card blend.
   - Outputted `public/abhishek_reference.png`, `src/assets/abhishek_reference.png`, and updated `src/components/sections/Hero.jsx`.
 
+### [Update] — Content Refinement: Academic Year & Specialty Cards
+- **Implemented**:
+  - Removed "2023" from the BTech education entry, updating to clean "Second Year" in `src/data/portfolioData.js`.
+  - Removed "Data Analytics & Modeling (Python & SQL)" and "Machine Learning Concepts (Foundational)" from the About section specialties grid in `src/components/sections/About.jsx`.
+  - Kept the clean 2-card layout exclusively highlighting Abhishek's live platforms: "Web Application Platforms (Live on Vercel)" and "Interactive 2D Games (Live on Netlify)".
+
 ---
 
 ## Completion Verification

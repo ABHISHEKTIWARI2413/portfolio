@@ -116,7 +116,7 @@ export const educationData = [
   {
     degree: "Bachelor of Technology (BTech)",
     branch: "Data Science",
-    year: "Second Year (2023 - Present)",
+    year: "Second Year",
     institution: "Pranveer Singh Institute of Technology (PSIT)",
     description:
       "Pursuing specialized curriculum covering Data Structures, Algorithms, Database Management Systems, Statistical Analysis, and Machine Learning foundations.",

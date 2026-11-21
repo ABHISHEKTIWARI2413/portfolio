@@ -192,3 +192,10 @@
     - Updated hero card container aspect ratio to 800/920 matching the artwork dimensions.
   - Audited code quality with `oxlint` (0 warnings, 0 errors).
   - Verified production build with `vite build` (compiled cleanly in 490ms).
+
+### [Update - Content Refinement: Year & Specialty Cards]
+- Status: COMPLETED
+- Actions taken:
+  - Removed "2023" year specification from BTech education entry, updating to clean "Second Year" in `src/data/portfolioData.js`.
+  - Removed "Data Analytics & Modeling (Python & SQL)" and "Machine Learning Concepts (Foundational)" cards from the About section specialties grid in `src/components/sections/About.jsx`, keeping the focused 2-column showcase on live deployed platforms ("Web Application Platforms - Live on Vercel" and "Interactive 2D Games - Live on Netlify").
+  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (0 errors).
