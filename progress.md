@@ -126,6 +126,15 @@ This document records the full development trajectory across all 10 iterations r
   - Authored comprehensive `README.md` with features, setup steps, and Vercel deployment guide.
   - Documented placeholders for future personal additions (resume PDF, official LinkedIn URL).
 
+### [Special Update] — Reference Portrait: Monochrome with Neon Lime Arch
+- **Goal**: Recreate the exact portrait aesthetic from `https://xabed.framer.website/` as provided in the reference image.
+- **Implemented**:
+  - Sampled exact color and geometry from the reference image (`#c9f31d` / `#aed11c`, 24px stroke neon arch with downward fade and glow bloom).
+  - Converted Abhishek's original photo into a high-contrast studio monochrome portrait with crisp facial features, deep dark hair, and subtle ambient lighting tone on the hoodie.
+  - Symmetrically framed Abhishek with the glowing neon arch behind his head and shoulders.
+  - Applied soft gradient feathering on the lower hoodie for a seamless dark-theme card blend.
+  - Outputted `public/abhishek_reference.png`, `src/assets/abhishek_reference.png`, and updated `src/components/sections/Hero.jsx`.
+
 ---
 
 ## Completion Verification
@@ -138,4 +147,5 @@ This document records the full development trajectory across all 10 iterations r
 - [x] Zero linter errors (`oxlint` passes cleanly).
 - [x] Missing personal information clearly identified in documentation.
 - [x] README.md contains full setup and deployment instructions.
+- [x] Photo edited to match the reference site with high-contrast monochrome subject and neon lime arch.
 

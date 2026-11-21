@@ -136,7 +136,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Column: Visual Showcase Card with Transparent Portrait & Rotating Badge */}
+          {/* Right Column: Visual Showcase Card with Reference Neon Arch Portrait & Rotating Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -144,24 +144,17 @@ export default function Hero() {
             className="lg:col-span-5 relative flex justify-center"
           >
             {/* The Main Hero Card */}
-            <div className="relative w-full max-w-[420px] rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-[#181818] via-[#121212] to-[#0c0c0c] border border-white/10 shadow-2xl flex flex-col items-center overflow-hidden group">
+            <div className="relative w-full max-w-[430px] rounded-3xl p-5 sm:p-6 bg-gradient-to-b from-[#181818] via-[#121212] to-[#0c0c0c] border border-white/10 shadow-2xl flex flex-col items-center overflow-hidden group">
               {/* Internal Accent Glow - Electric Lime */}
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-[#c9f31d]/20 blur-[80px] rounded-full pointer-events-none" />
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#c9f31d]/10 blur-[70px] rounded-full pointer-events-none" />
 
-              {/* Arch Backdrop Graphic Container */}
-              <div className="relative w-full h-[370px] sm:h-[420px] rounded-2xl bg-gradient-to-b from-[#1f1f1f] via-[#151515] to-[#0c0c0c] border border-white/[0.08] flex items-end justify-center overflow-hidden">
-                {/* Subtle radial aura behind head */}
-                <div className="absolute top-10 w-48 h-48 rounded-full bg-[#c9f31d]/25 blur-[50px] pointer-events-none" />
-                
-                {/* Arch outline graphic matching Xabed */}
-                <div className="absolute inset-x-8 top-8 bottom-0 rounded-t-full border-t-2 border-x-2 border-[#c9f31d]/25 pointer-events-none" />
-
-                {/* Abhishek's Transparent Cutout Portrait */}
+              {/* Exact Reference Arch Portrait */}
+              <div className="relative w-full aspect-[800/880] rounded-2xl bg-[#101010] border border-white/[0.08] flex items-center justify-center overflow-hidden shadow-inner">
                 <img
-                  src="/abhishek.png"
+                  src="/abhishek_reference.png"
                   alt="Abhishek Tiwari"
-                  className="relative z-10 w-full h-full object-cover object-top drop-shadow-[0_20px_25px_rgba(0,0,0,0.9)] transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                 />
 
                 {/* Floating pill badge top left */}

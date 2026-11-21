@@ -171,3 +171,19 @@
   - Added mini avatar thumbnail to the floating rounded Navbar next to the logo.
   - Added avatar thumbnail to the About section story card.
   - Verified with `oxlint` (0 warnings, 0 errors) and validated production build (`vite build` in 552ms).
+
+### [Update - Reference Portrait Style: Monochrome with Neon Lime Arch]
+- Status: COMPLETED
+- Actions taken:
+  - Analyzed user-provided reference image (`media_1795262724660_17d5956a.jpg`) from `https://xabed.framer.website/`:
+    - Detected deep dark background (`#101010`), thick neon electric lime arch (`#aed11c` / `#c9f31d`, 24-26px stroke) framing the subject with downward gradient fading and soft neon bloom glow.
+    - Detected high-contrast monochrome studio portrait style with sharp facial features and subtle ambient lighting warmth on the hoodie.
+  - Processed Abhishek Tiwari's original photo (`media_1795245017857_e8379820.jpg`):
+    - Converted subject to high-contrast monochrome studio portrait with customized photopic luminance weighting and enhanced local contrast.
+    - Symmetrically cropped and centered subject around the head and crossed-arms pose.
+    - Generated full-resolution composited portrait with the signature neon lime arch behind Abhishek's head and shoulders.
+    - Applied soft bottom gradient fade to the hoodie for seamless blending into the dark card surface.
+    - Saved final high-res artwork to `public/abhishek_reference.png`, `src/assets/abhishek_reference.png`, and the conversation artifact directory.
+  - Updated `src/components/sections/Hero.jsx` to display `/abhishek_reference.png` as the hero centerpiece.
+  - Audited code quality with `oxlint` (0 warnings, 0 errors).
+  - Verified production build with `vite build` (compiled cleanly in 490ms).
