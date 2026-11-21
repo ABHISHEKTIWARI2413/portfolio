@@ -132,6 +132,11 @@ This document records the full development trajectory across all 10 iterations r
   - Sampled exact color and geometry from the reference image (`#c9f31d` / `#aed11c`, 24px stroke neon arch with downward fade and glow bloom).
   - Converted Abhishek's original photo into a high-contrast studio monochrome portrait with crisp facial features, deep dark hair, and subtle ambient lighting tone on the hoodie.
   - Symmetrically framed Abhishek with the glowing neon arch behind his head and shoulders.
+  - Adjusted the yellow arch line fit:
+    - Expanded arch diameter to 640px (R=320px) spanning x=80..720.
+    - Symmetrically scaled and positioned Abhishek (width 540px, top y=148px) with a snug 38px halo clearance above hair (arch apex at y=110px).
+    - Established balanced 50px clearance margins along both shoulders and arms, ensuring the neon yellow line is 100% visible and unclipped from top to bottom.
+    - Updated hero card container aspect ratio to 800/920 matching the artwork dimensions.
   - Applied soft gradient feathering on the lower hoodie for a seamless dark-theme card blend.
   - Outputted `public/abhishek_reference.png`, `src/assets/abhishek_reference.png`, and updated `src/components/sections/Hero.jsx`.
 

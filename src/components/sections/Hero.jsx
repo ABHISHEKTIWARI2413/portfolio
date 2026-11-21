@@ -150,11 +150,11 @@ export default function Hero() {
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#c9f31d]/10 blur-[70px] rounded-full pointer-events-none" />
 
               {/* Exact Reference Arch Portrait */}
-              <div className="relative w-full aspect-[800/880] rounded-2xl bg-[#101010] border border-white/[0.08] flex items-center justify-center overflow-hidden shadow-inner">
+              <div className="relative w-full aspect-[800/920] rounded-2xl bg-[#0f0f0f] border border-white/[0.08] flex items-center justify-center overflow-hidden shadow-inner">
                 <img
                   src="/abhishek_reference.png"
                   alt="Abhishek Tiwari"
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                 />
 
                 {/* Floating pill badge top left */}
