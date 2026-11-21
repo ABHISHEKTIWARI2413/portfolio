@@ -2,19 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { navItems, personalInfo } from '../../data/portfolioData'
-import { Container, Button } from '../ui'
+import { Button } from '../ui'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
-  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      // Toggle background blur intensity
-      setScrolled(window.scrollY > 20)
-
-      // Active section detection
       const sectionIds = navItems.map((item) => item.href.replace('#', ''))
       const scrollPosition = window.scrollY + 200
 
@@ -48,40 +43,79 @@ export default function Navbar() {
   }
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#08090d]/85 backdrop-blur-md border-b border-white/[0.08] shadow-lg shadow-black/30 py-3'
-          : 'bg-transparent border-b border-transparent py-5'
-      }`}
-    >
-      <Container size="lg">
-        <div className="flex items-center justify-between">
-          {/* Logo / Name */}
-          <a
-            href="#home"
-            onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-2.5 group cursor-pointer"
-          >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 p-[1px] shadow-md shadow-purple-600/20">
-              <div className="w-full h-full bg-[#0d0e17] rounded-[11px] flex items-center justify-center group-hover:bg-[#131522] transition-colors">
-                <span className="text-sm font-bold tracking-tight bg-gradient-to-r from-purple-400 to-indigo-300 bg-clip-text text-transparent">
-                  {personalInfo.initials}
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold text-white tracking-tight group-hover:text-purple-300 transition-colors">
-                {personalInfo.name}
-              </span>
-              <span className="text-[11px] text-gray-400 font-mono hidden sm:inline-block">
-                Data Science
-              </span>
-            </div>
-          </a>
+    <header className="sticky top-4 z-50 px-4 sm:px-6 w-full max-w-6xl mx-auto">
+      <div className="glass-header rounded-full px-5 sm:px-7 py-3 flex items-center justify-between shadow-2xl shadow-black/60 border border-white/10">
+        {/* Brand Logo */}
+        <a
+          href="#home"
+          onClick={(e) => handleNavClick(e, '#home')}
+          className="flex items-center gap-1.5 group cursor-pointer"
+        >
+          <span className="font-['Urbanist'] font-extrabold text-xl sm:text-2xl text-white tracking-tight group-hover:opacity-90 transition-opacity">
+            {personalInfo.name.split(' ')[0]}
+            <span className="text-[#c9f31d]">.</span>
+          </span>
+        </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 bg-[#13151f]/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/[0.08]">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden md:flex items-center gap-1.5 bg-[#181818]/70 px-3 py-1.5 rounded-full border border-white/[0.06]">
+          {navItems.map((item) => {
+            const id = item.href.replace('#', '')
+            const isActive = activeSection === id
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className={`text-xs font-['Urbanist'] font-semibold px-4 py-1.5 rounded-full transition-all duration-200 relative ${
+                  isActive
+                    ? 'text-black bg-[#c9f31d]'
+                    : 'text-gray-300 hover:text-white hover:bg-white/[0.05]'
+                }`}
+              >
+                {item.name}
+              </a>
+            )
+          })}
+        </nav>
+
+        {/* Right CTA Button ("Let's Talk") */}
+        <div className="hidden md:flex items-center gap-3">
+          <Button
+            variant="lime"
+            size="sm"
+            href="#contact"
+            onClick={(e) => handleNavClick(e, '#contact')}
+            icon={ArrowUpRight}
+            iconPosition="right"
+          >
+            Let's Talk
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 rounded-full text-white bg-white/[0.08] border border-white/10 hover:border-[#c9f31d]/40 transition-colors"
+            aria-label="Toggle navigation menu"
+          >
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5 text-[#c9f31d]" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Drawer Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden mt-2 p-5 rounded-3xl bg-[#0f0f0f] border border-white/10 shadow-2xl shadow-black/80 space-y-2"
+          >
             {navItems.map((item) => {
               const id = item.href.replace('#', '')
               const isActive = activeSection === id
@@ -90,99 +124,30 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`text-xs font-medium px-3.5 py-1.5 rounded-full transition-all duration-200 relative ${
+                  className={`block px-4 py-3 rounded-2xl text-sm font-['Urbanist'] font-bold transition-colors ${
                     isActive
-                      ? 'text-white'
-                      : 'text-gray-400 hover:text-gray-200 hover:bg-white/[0.04]'
+                      ? 'bg-[#c9f31d] text-black'
+                      : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeNavTab"
-                      className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 border border-purple-500/40 rounded-full -z-10"
-                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                    />
-                  )}
                   {item.name}
                 </a>
               )
             })}
-          </nav>
-
-          {/* Right Action Button (Desktop) */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button
-              variant="secondary"
-              size="sm"
-              href="#contact"
-              onClick={(e) => handleNavClick(e, '#contact')}
-              icon={ArrowUpRight}
-              iconPosition="right"
-            >
-              Get in Touch
-            </Button>
-          </div>
-
-          {/* Mobile Menu Toggle Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              type="button"
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-xl text-gray-300 hover:text-white bg-white/[0.05] border border-white/10 focus:outline-none"
-              aria-label="Toggle navigation menu"
-              aria-expanded={isOpen}
-            >
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
-      </Container>
-
-      {/* Mobile Drawer Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-[#0a0c13] border-b border-white/10"
-          >
-            <Container className="py-4 space-y-1">
-              {navItems.map((item) => {
-                const id = item.href.replace('#', '')
-                const isActive = activeSection === id
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={(e) => handleNavClick(e, item.href)}
-                    className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                      isActive
-                        ? 'bg-purple-600/20 text-purple-300 border border-purple-500/30'
-                        : 'text-gray-300 hover:text-white hover:bg-white/5'
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                )
-              })}
-              <div className="pt-3 border-t border-white/10 mt-2">
-                <Button
-                  variant="primary"
-                  size="sm"
-                  href="#contact"
-                  onClick={(e) => handleNavClick(e, '#contact')}
-                  className="w-full justify-center"
-                >
-                  Contact Abhishek
-                </Button>
-              </div>
-            </Container>
+            <div className="pt-3 border-t border-white/10 mt-3">
+              <Button
+                variant="lime"
+                size="md"
+                href="#contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
+                className="w-full justify-center"
+              >
+                Let's Talk
+              </Button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
     </header>
   )
 }
-

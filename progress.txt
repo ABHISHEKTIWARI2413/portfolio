@@ -141,3 +141,20 @@
   - Removed project-specific GitHub repository buttons from CampusShare and Dusk Compound Game cards as requested.
   - Upgraded each project card's call-to-action to a prominent full-width "Launch Live Demo" button directly connecting to the active deployments.
   - Verified with `oxlint` (0 warnings, 0 errors) and validated production build (`npm run build` in 524ms).
+
+### [Update - 1:1 Xabed Design System Transformation]
+- Status: COMPLETED
+- Actions taken:
+  - Transformed the portfolio to match the exact aesthetic, typography, and component styling of https://xabed.framer.website/:
+    - **Typography**: Imported and configured `Urbanist` (headings, badges, buttons) and `Plus Jakarta Sans` (body and subtitles).
+    - **Palette & Lighting**: Pure deep dark background (`#070707`), `#131313` card surfaces, and the signature **Electric Lime** (`#c9f31d`) accent with neon spotlight glows.
+    - **Navigation**: Built floating rounded-full glass header with `Abhishek.` logo, active pills, and electric lime `Let's Talk` CTA button.
+    - **Hero Section**: Replicated Xabed's hero composition with top uppercase pill badge (`HI, I AM ABHISHEK TIWARI.`), giant Urbanist headline, electric lime `Download CV` button, `Explore Projects` dark pill, high-tech card visual with floating chips, and the iconic animated spinning circular text badge (`CircularBadge`).
+    - **Skills Section ("My Skills")**: Styled in sleek `#131313` cards with lime glow borders on hover, icon boxes, level tags, and domain subtitles.
+    - **About Section ("Why Choose Me")**: Replicated 2-column layout with 2+ years experience counter, quick email chip, and specialty cards.
+    - **Projects Section ("Latest Work")**: Designed numbered project showcase (`01.`, `02.`) featuring **CampusShare** and **Dusk Compound Game** with full-width electric lime `Launch Live Demo` buttons and live pulse status tags.
+    - **Education & Certifications ("Education Experience")**: Formatted academic timeline at PSIT, verified credentials cards with verification actions, and hackathon milestones.
+    - **Contact Section ("Let's Collaborate")**: Replicated Xabed's collaboration layout with direct email, instant copy feedback, and interactive message composer.
+    - **Footer**: Modern dark footer with brand identity, nav links, social profile pills, back-to-top button, and dynamic copyright year.
+  - Audited code quality with `oxlint`: **0 warnings, 0 errors** across all 21 project files.
+  - Verified production build with `vite build`: Compiled cleanly in **492ms**.

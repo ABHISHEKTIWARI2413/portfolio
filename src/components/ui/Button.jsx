@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 
 export default function Button({
   children,
-  variant = 'primary',
+  variant = 'lime',
   size = 'md',
   href,
   onClick,
   icon: Icon,
-  iconPosition = 'left',
+  iconPosition = 'right',
   download,
   target,
   rel,
@@ -17,34 +17,46 @@ export default function Button({
   ...props
 }) {
   const baseClasses =
-    'inline-flex items-center justify-center font-medium transition-all duration-200 select-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none rounded-xl'
+    'inline-flex items-center justify-center font-["Urbanist"] font-bold transition-all duration-300 select-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed rounded-full group'
 
   const sizeClasses = {
-    sm: 'text-xs px-3.5 py-1.5 gap-1.5',
-    md: 'text-sm px-5 py-2.5 gap-2',
-    lg: 'text-base px-6 py-3.5 gap-2.5',
+    sm: 'text-xs px-4 py-2 gap-1.5',
+    md: 'text-sm px-6 py-3 gap-2.5',
+    lg: 'text-base px-8 py-3.5 gap-3',
   }
 
   const variantClasses = {
-    primary:
-      'bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white shadow-lg shadow-purple-600/20 hover:shadow-purple-600/35 hover:brightness-110 active:scale-[0.98]',
-    secondary:
-      'bg-white/[0.06] hover:bg-white/[0.1] text-gray-200 hover:text-white border border-white/10 hover:border-white/20 backdrop-blur-md active:scale-[0.98]',
-    outline:
-      'border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 hover:border-purple-500/50 active:scale-[0.98]',
-    ghost:
-      'text-gray-400 hover:text-white hover:bg-white/5 active:scale-[0.98]',
+    lime: 'bg-[#c9f31d] text-black hover:bg-[#bce617] shadow-lg shadow-[#c9f31d]/20 active:scale-[0.98]',
+    primary: 'bg-[#c9f31d] text-black hover:bg-[#bce617] shadow-lg shadow-[#c9f31d]/20 active:scale-[0.98]',
+    secondary: 'bg-[#161616] text-white hover:text-white border border-white/10 hover:border-[#c9f31d]/50 hover:bg-[#1e1e1e] active:scale-[0.98]',
+    dark: 'bg-[#161616] text-white hover:text-white border border-white/10 hover:border-[#c9f31d]/50 hover:bg-[#1e1e1e] active:scale-[0.98]',
+    outline: 'border border-[#c9f31d]/40 text-[#c9f31d] hover:bg-[#c9f31d]/10 hover:border-[#c9f31d] active:scale-[0.98]',
+    ghost: 'text-gray-400 hover:text-white hover:bg-white/5 active:scale-[0.98]',
   }
 
   const computedClassName = `${baseClasses} ${sizeClasses[size] || sizeClasses.md} ${
-    variantClasses[variant] || variantClasses.primary
+    variantClasses[variant] || variantClasses.lime
   } ${className}`
+
+  const isLime = variant === 'lime' || variant === 'primary'
 
   const content = (
     <>
-      {Icon && iconPosition === 'left' && <Icon className="w-4 h-4 shrink-0" />}
+      {Icon && iconPosition === 'left' && (
+        <span className={`inline-flex items-center justify-center transition-transform group-hover:-translate-x-0.5`}>
+          <Icon className="w-4 h-4 shrink-0" />
+        </span>
+      )}
       <span>{children}</span>
-      {Icon && iconPosition === 'right' && <Icon className="w-4 h-4 shrink-0" />}
+      {Icon && iconPosition === 'right' && (
+        <span
+          className={`inline-flex items-center justify-center rounded-full p-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
+            isLime ? 'bg-black/10' : 'bg-white/10 text-white'
+          }`}
+        >
+          <Icon className="w-3.5 h-3.5 shrink-0" />
+        </span>
+      )}
     </>
   )
 
@@ -80,4 +92,3 @@ export default function Button({
     </motion.button>
   )
 }
-

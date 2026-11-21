@@ -1,94 +1,120 @@
 import React from 'react'
-import { Cpu, Terminal, Database, Wrench, Sparkles, CheckCircle2 } from 'lucide-react'
-import { skillCategories } from '../../data/portfolioData'
+import {
+  Terminal,
+  Database,
+  Brain,
+  Code2,
+  GitBranch,
+  Sparkles,
+  Cpu,
+} from 'lucide-react'
 import { Container, SectionHeading, Card, Badge } from '../ui'
 
 export default function Skills() {
-  const getCategoryIcon = (category) => {
-    switch (category) {
-      case 'Programming':
-        return Terminal
-      case 'Data Science':
-        return Database
-      case 'Tools & Environment':
-        return Wrench
-      case 'AI & Technology':
-        return Sparkles
-      default:
-        return Cpu
-    }
-  }
+  const skillsList = [
+    {
+      name: 'Python',
+      domain: 'Core Programming',
+      level: 'Proficient',
+      icon: Terminal,
+      description:
+        'Data structures, statistical computation, scientific libraries, and algorithm implementation for analytical tasks.',
+    },
+    {
+      name: 'SQL & DBMS',
+      domain: 'Database Engineering',
+      level: 'Verified',
+      icon: Database,
+      description:
+        'Relational data modeling, complex SQL queries, aggregations, and performance-tuned database schemas.',
+    },
+    {
+      name: 'Machine Learning',
+      domain: 'Data Science',
+      level: 'Foundational',
+      icon: Brain,
+      description:
+        'Predictive modeling, supervised algorithms, feature engineering, and evaluation metrics.',
+    },
+    {
+      name: 'Web Development & React',
+      domain: 'Frontend & UI',
+      level: 'Applied',
+      icon: Code2,
+      description:
+        'Building responsive, fast, and accessible user interfaces with modern React, Tailwind CSS, and JavaScript.',
+    },
+    {
+      name: 'Git & GitHub',
+      domain: 'Version Control',
+      level: 'Workflow Standard',
+      icon: GitBranch,
+      description:
+        'Branching strategies, repository management, collaborative workflows, and deployment pipelines.',
+    },
+    {
+      name: 'AI & Prompt Engineering',
+      domain: 'Emerging Tech',
+      level: 'Active Exploration',
+      icon: Sparkles,
+      description:
+        'Leveraging generative AI architectures, structured LLM prompt engineering, and intelligent application design.',
+    },
+  ]
 
   return (
     <section id="skills" className="py-20 sm:py-28 relative">
-      {/* Background glow accent */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-purple-600/10 blur-[130px] rounded-full pointer-events-none" />
-
-      <Container>
+      <Container size="lg">
         <SectionHeading
-          tag="Technical Skills"
+          tag="My Skills"
           tagIcon={Cpu}
-          title="Disciplined Foundations,"
-          accentTitle="Modern Tooling"
-          subtitle="Confirmed technical proficiencies organized by domain. Reflecting verified coursework and active development."
+          title="Experience The Best"
+          accentTitle="Digital & Analytical Skills"
+          subtitle="A comprehensive overview of confirmed technical disciplines, programming languages, and engineering tools."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {skillCategories.map((group, index) => {
-            const Icon = getCategoryIcon(group.category)
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {skillsList.map((skill, index) => {
+            const Icon = skill.icon
 
             return (
               <Card
                 key={index}
-                className="hover:border-purple-500/35 transition-all duration-300 relative group"
+                className="hover:border-[#c9f31d]/60 group transition-all duration-300 flex flex-col justify-between"
               >
-                {/* Header */}
-                <div className="flex items-start justify-between gap-4 mb-5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 transition-colors">
-                      <Icon className="w-5 h-5" />
+                <div>
+                  {/* Top Bar with Icon & Level */}
+                  <div className="flex items-center justify-between gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center justify-center text-[#c9f31d] group-hover:scale-105 group-hover:bg-[#c9f31d] group-hover:text-black transition-all duration-300">
+                      <Icon className="w-6 h-6" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-purple-200 transition-colors">
-                        {group.category}
-                      </h3>
-                      <p className="text-xs text-gray-400">{group.description}</p>
-                    </div>
+                    <Badge variant="lime" size="sm">
+                      {skill.level}
+                    </Badge>
                   </div>
-                  <Badge variant={group.color} size="sm">
-                    {group.skills.length} Skills
-                  </Badge>
+
+                  {/* Title & Domain */}
+                  <span className="text-xs font-['Urbanist'] font-semibold text-gray-400 uppercase tracking-wider block mb-1">
+                    {skill.domain}
+                  </span>
+                  <h3 className="text-2xl font-bold font-['Urbanist'] text-white mb-3 group-hover:text-[#c9f31d] transition-colors">
+                    {skill.name}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-400 text-sm leading-relaxed font-['Plus_Jakarta_Sans']">
+                    {skill.description}
+                  </p>
                 </div>
 
-                {/* Skill Items List */}
-                <div className="space-y-3 mt-4">
-                  {group.skills.map((skill, sIdx) => (
-                    <div
-                      key={sIdx}
-                      className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.04] transition-colors"
-                    >
-                      <div className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
-                        <span className="text-sm font-medium text-gray-200">
-                          {skill.name}
-                        </span>
-                      </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-white/[0.04] text-gray-400 border border-white/[0.05]">
-                        {skill.level}
-                      </span>
-                    </div>
-                  ))}
+                {/* Bottom Accent line */}
+                <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+                  <span className="text-xs text-gray-500 font-mono">BTech Data Science</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c9f31d]" />
                 </div>
               </Card>
             )
           })}
-        </div>
-
-        {/* PRD Compliance Notice / Honest Disclaimer */}
-        <div className="mt-10 max-w-xl mx-auto text-center">
-          <p className="text-xs text-gray-500 font-mono">
-            * Note: Skills displayed reflect verified coursework, hands-on practice, and ongoing learning milestones without false seniority claims.
-          </p>
         </div>
       </Container>
     </section>

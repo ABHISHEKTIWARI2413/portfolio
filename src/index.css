@@ -1,74 +1,127 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-bg: #08090d;
-  --color-dark-surface: #0e1017;
-  --color-dark-card: #13151f;
-  --color-dark-card-hover: #191c2b;
+  --font-heading: 'Urbanist', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --color-dark-bg: #070707;
+  --color-dark-surface: #0d0d0d;
+  --color-dark-card: #131313;
+  --color-dark-card-hover: #1a1a1a;
   --color-dark-border: rgba(255, 255, 255, 0.08);
-  --color-dark-border-hover: rgba(168, 85, 247, 0.35);
-  
-  --color-brand-purple: #a855f7;
-  --color-brand-indigo: #6366f1;
-  --color-brand-blue: #3b82f6;
-  --color-brand-cyan: #06b6d4;
+  --color-dark-border-hover: rgba(201, 243, 29, 0.4);
+
+  --color-lime-primary: #c9f31d;
+  --color-lime-hover: #b8e018;
+  --color-lime-subtle: rgba(201, 243, 29, 0.1);
 }
 
 @layer base {
   * {
-    border-color: var(--color-dark-border);
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
   body {
-    background-color: var(--color-dark-bg);
-    color: #e2e8f0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #070707;
+    color: #e3e3e3;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Urbanist', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
   ::selection {
-    background-color: rgba(168, 85, 247, 0.3);
-    color: #f3e8ff;
+    background-color: #c9f31d;
+    color: #000000;
   }
 }
 
-/* Custom Design System Utilities */
-.glass-panel {
-  background: rgba(19, 21, 31, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Xabed Inspired Signature Utilities */
+.font-urbanist {
+  font-family: 'Urbanist', sans-serif;
 }
 
-.glass-card {
-  background: linear-gradient(135deg, rgba(20, 23, 35, 0.75) 0%, rgba(14, 16, 25, 0.85) 100%);
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.glass-header {
+  background: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.card-xabed {
+  background: #131313;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-card:hover {
-  border-color: rgba(168, 85, 247, 0.3);
-  box-shadow: 0 8px 30px -4px rgba(168, 85, 247, 0.15), 0 0 15px -1px rgba(168, 85, 247, 0.1);
+.card-xabed:hover {
+  border-color: rgba(201, 243, 29, 0.45);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px -3px rgba(201, 243, 29, 0.12);
   transform: translateY(-2px);
 }
 
-.glow-pill {
-  box-shadow: 0 0 20px -3px rgba(168, 85, 247, 0.25);
+.text-lime-accent {
+  color: #c9f31d;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.bg-lime-accent {
+  background-color: #c9f31d;
 }
 
-.text-gradient-accent {
-  background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #6366f1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.glow-lime {
+  box-shadow: 0 0 25px -4px rgba(201, 243, 29, 0.35);
+}
+
+.btn-lime {
+  background-color: #c9f31d;
+  color: #000000;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-lime:hover {
+  background-color: #bce617;
+  box-shadow: 0 0 25px -3px rgba(201, 243, 29, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  background-color: #161616;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-dark:hover {
+  background-color: #202020;
+  border-color: rgba(201, 243, 29, 0.35);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Spinning circular badge animation */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
 }

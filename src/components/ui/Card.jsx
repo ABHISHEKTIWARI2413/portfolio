@@ -13,8 +13,8 @@ export default function Card({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`glass-card rounded-2xl p-6 sm:p-7 relative overflow-hidden ${
-        glowOnHover ? 'hover:border-purple-500/40' : ''
+      className={`card-xabed p-6 sm:p-8 relative overflow-hidden ${
+        glowOnHover ? 'hover:border-[#c9f31d]/60' : ''
       } ${className}`}
       {...props}
     >
@@ -22,4 +22,3 @@ export default function Card({
     </motion.div>
   )
 }
-

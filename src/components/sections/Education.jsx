@@ -26,74 +26,72 @@ export default function Education() {
 
   return (
     <section id="education" className="py-20 sm:py-28 relative">
-      <Container>
+      <Container size="lg">
         <SectionHeading
-          tag="Education & Growth"
+          tag="Education Experience"
           tagIcon={GraduationCap}
           title="Academic Foundation &"
-          accentTitle="Milestones"
+          accentTitle="Technical Milestones"
           subtitle="Rigorous academic preparation in Data Science paired with hands-on technical learning milestones."
         />
 
+        {/* Education Timeline Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-          {/* Main Education Card */}
           {educationData.map((edu, idx) => (
             <div key={idx} className="lg:col-span-7">
-              <Card className="h-full border-purple-500/25 relative overflow-hidden flex flex-col justify-between">
+              <Card className="h-full border-white/10 hover:border-[#c9f31d]/50 flex flex-col justify-between">
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                      <div className="w-12 h-12 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center justify-center text-[#c9f31d]">
                         <GraduationCap className="w-6 h-6" />
                       </div>
                       <div>
-                        <span className="text-xs font-mono text-purple-300 uppercase tracking-wider">
+                        <span className="text-xs font-['Urbanist'] font-bold text-[#c9f31d] uppercase tracking-wider">
                           Undergraduate Degree
                         </span>
-                        <h3 className="text-xl sm:text-2xl font-bold text-white">
+                        <h3 className="text-2xl font-bold font-['Urbanist'] text-white">
                           {edu.degree}
                         </h3>
                       </div>
                     </div>
-                    <Badge variant="purple" size="md">
+                    <Badge variant="lime" size="md">
                       {edu.branch}
                     </Badge>
                   </div>
 
-                  {/* Institution & Year Info */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-                    <div className="flex items-center gap-2.5 text-sm text-gray-300">
-                      <Building className="w-4 h-4 text-purple-400 shrink-0" />
-                      <span className="font-medium">{edu.institution}</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+                    <div className="flex items-center gap-2.5 text-sm text-gray-300 font-['Urbanist'] font-semibold">
+                      <Building className="w-4 h-4 text-[#c9f31d] shrink-0" />
+                      <span>{edu.institution}</span>
                     </div>
-                    <div className="flex items-center gap-2.5 text-sm text-gray-400">
-                      <Calendar className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <div className="flex items-center gap-2.5 text-sm text-gray-400 font-mono">
+                      <Calendar className="w-4 h-4 text-gray-400 shrink-0" />
                       <span>{edu.year}</span>
                     </div>
                   </div>
 
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6 font-['Plus_Jakarta_Sans']">
                     {edu.description}
                   </p>
 
-                  {/* Coursework Focus */}
                   <div className="space-y-2.5">
-                    <span className="text-xs font-mono uppercase tracking-wider text-gray-400 flex items-center gap-2">
-                      <BookOpen className="w-3.5 h-3.5 text-purple-400" />
-                      Academic & Practical Focus
+                    <span className="text-xs font-['Urbanist'] font-bold uppercase tracking-wider text-gray-400 flex items-center gap-2">
+                      <BookOpen className="w-3.5 h-3.5 text-[#c9f31d]" />
+                      Core Coursework & Practical Labs
                     </span>
                     <div className="space-y-2">
                       {edu.highlights.map((item, hIdx) => (
                         <div key={hIdx} className="flex items-start gap-2.5 text-sm text-gray-300">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-                          <span>{item}</span>
+                          <CheckCircle2 className="w-4 h-4 text-[#c9f31d] mt-0.5 shrink-0" />
+                          <span className="font-['Plus_Jakarta_Sans']">{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-gray-500">
+                <div className="mt-8 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-gray-500 font-mono">
                   <span>Pranveer Singh Institute of Technology</span>
                   <span>Kanpur, India</span>
                 </div>
@@ -101,72 +99,71 @@ export default function Education() {
             </div>
           ))}
 
-          {/* Quick Academic Highlights side card */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
-            <Card className="flex-1 bg-gradient-to-b from-[#141724] to-[#0e101a] border-white/10">
+          {/* Academic Focus Cards */}
+          <div className="lg:col-span-5 flex flex-col justify-between gap-4">
+            <Card className="h-full bg-gradient-to-br from-[#181818] to-[#101010] border-white/10">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                <div className="w-10 h-10 rounded-2xl bg-[#c9f31d] text-black flex items-center justify-center font-bold">
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-white">Data Science Specialization</h4>
-                  <p className="text-xs text-gray-400">Second Year Focus Areas</p>
+                  <h4 className="text-lg font-bold font-['Urbanist'] text-white">
+                    Data Science Focus
+                  </h4>
+                  <p className="text-xs text-gray-400">Second Year Technical Core</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                Structured curriculum prioritizing mathematical models, predictive algorithms, computational statistics, and database systems.
+              <p className="text-sm text-gray-400 leading-relaxed mb-5 font-['Plus_Jakarta_Sans']">
+                Comprehensive academic modules focused on mathematical modeling, database systems, predictive machine learning, and computational statistics.
               </p>
               <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-300">
-                  <span className="text-purple-300 font-semibold block">Data Structures</span>
-                  Fundamental logic & algorithms
+                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-gray-300">
+                  <span className="text-[#c9f31d] font-bold font-['Urbanist'] block">Data Structures</span>
+                  Algorithms & efficiency
                 </div>
-                <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-300">
-                  <span className="text-blue-300 font-semibold block">DBMS & SQL</span>
-                  Relational schemas & querying
+                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-gray-300">
+                  <span className="text-[#c9f31d] font-bold font-['Urbanist'] block">DBMS & SQL</span>
+                  Schemas & querying
                 </div>
-                <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-300">
-                  <span className="text-indigo-300 font-semibold block">Machine Learning</span>
-                  Supervised & model evaluation
+                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-gray-300">
+                  <span className="text-[#c9f31d] font-bold font-['Urbanist'] block">Machine Learning</span>
+                  Model algorithms
                 </div>
-                <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-300">
-                  <span className="text-emerald-300 font-semibold block">Python Analytics</span>
-                  Pandas, NumPy, statistical graphs
+                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-gray-300">
+                  <span className="text-[#c9f31d] font-bold font-['Urbanist'] block">Python Analytics</span>
+                  NumPy, Pandas, Visuals
                 </div>
               </div>
             </Card>
           </div>
         </div>
 
-        {/* Section 8: Achievements */}
-        <div className="pt-8">
-          <div className="text-center max-w-xl mx-auto mb-10">
-            <Badge variant="blue" size="md" icon={Trophy} className="mb-3 glow-pill">
+        {/* Achievements Subsection */}
+        <div>
+          <div className="mb-8">
+            <Badge variant="lime" size="md" className="mb-3">
               Milestones
             </Badge>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white">
-              Key Achievements & Milestones
+            <h3 className="text-2xl sm:text-3xl font-extrabold font-['Urbanist'] text-white">
+              Key Achievements & Hackathons
             </h3>
-            <p className="text-sm text-gray-400 mt-2">
-              Recognized student activities and milestones achieved throughout my college journey.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {achievements.map((item, aIdx) => {
               const Icon = getAchievementIcon(item.icon)
               return (
-                <Card key={aIdx} className="hover:border-purple-500/30 transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                <Card key={aIdx} className="hover:border-[#c9f31d]/50 transition-all">
+                  <div className="w-11 h-11 rounded-2xl bg-[#1d1d1d] border border-white/10 flex items-center justify-center text-[#c9f31d] mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-mono text-purple-400 block mb-1">
+                  <span className="text-xs font-['Urbanist'] font-bold text-[#c9f31d] block mb-1">
                     {item.category}
                   </span>
-                  <h4 className="text-base font-semibold text-white mb-2">
+                  <h4 className="text-lg font-bold font-['Urbanist'] text-white mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-gray-400 leading-relaxed">
+                  <p className="text-sm text-gray-400 leading-relaxed font-['Plus_Jakarta_Sans']">
                     {item.description}
                   </p>
                 </Card>

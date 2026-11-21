@@ -32,17 +32,19 @@ This document records the full development trajectory across all 10 iterations r
   - Configured `index.html` with title and responsive viewport.
   - Verified compilation via `npm run build`.
 
-### [Iteration 2] — Task 2: Design System
-- **Goal**: Establish colors, typography, layout, and reusable UI components.
+### [Iteration 2] — Task 2: Design System (Updated: Xabed Aesthetic)
+- **Goal**: Establish colors, typography, layout, and reusable UI components matching https://xabed.framer.website/.
 - **Implemented**:
-  - Defined color palette in `src/index.css`: dark void (`#08090d`), surface (`#0e1017`), card (`#13151f`), accents (`#a855f7`, `#6366f1`, `#3b82f6`).
-  - Added modern glassmorphism utility classes (`.glass-card`, `.glass-panel`, `.glow-pill`, `.text-gradient-accent`).
+  - Configured typography: `Urbanist` (headings, badges, buttons) and `Plus Jakarta Sans` (body and descriptions).
+  - Defined color palette in `src/index.css`: deep black (`#070707`), dark card surface (`#131313`), and electric lime primary accent (`#c9f31d`).
+  - Added glassmorphic floating header styling (`.glass-header`), Xabed card container (`.card-xabed`), and spinning circular text badge animation (`.animate-spin-slow`).
   - Created reusable components in `src/components/ui/`:
-    - `Button.jsx`: Variants, icon slots, external links, Framer Motion interactions.
-    - `Card.jsx`: Glassmorphic card container with viewport entrance and hover lift.
-    - `Badge.jsx`: Multicolored status and skill tags.
-    - `SectionHeading.jsx`: Consistent title, badge eyebrow, gradient highlight, and subtitle.
-    - `Container.jsx`: Responsive layout container.
+    - `Button.jsx`: Electric lime pill button (`btn-lime`), dark button (`btn-dark`), icon containers, smooth hover scaling.
+    - `Card.jsx`: `#131313` card container with lime hover border glow.
+    - `Badge.jsx`: Pill badges with pulsing status indicators.
+    - `CircularBadge.jsx`: Rotating SVG circular text badge (`DATA SCIENCE • DEVELOPER • INNOVATION •`).
+    - `SectionHeading.jsx`: Consistent section titles with uppercase pill tags and lime accents.
+    - `Container.jsx`: Standard responsive layout container.
     - `SocialIcons.jsx`: Custom SVG icons for GitHub and LinkedIn.
 
 ### [Iteration 3] — Task 3: Navigation and Hero
