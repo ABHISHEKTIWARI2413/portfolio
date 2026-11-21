@@ -36,23 +36,23 @@ export const navItems = [
 
 export const skillCategories = [
   {
-    category: "Programming",
-    description: "Core languages for software and analytical scripting",
+    category: "Programming & Databases",
+    description: "Core languages for software and relational data systems",
     color: "purple",
     skills: [
       { name: "Python", level: "Confirmed" },
-      { name: "SQL", level: "Confirmed" },
-      { name: "Basic JavaScript", level: "Basic" },
+      { name: "SQL & DBMS", level: "Confirmed" },
+      { name: "JavaScript", level: "Basic" },
     ],
   },
   {
-    category: "Data Science",
-    description: "Statistical discovery, data modeling, and visual insights",
+    category: "Web & Design",
+    description: "Modern web architecture, interface design, and prototyping",
     color: "blue",
     skills: [
-      { name: "Data Analysis", level: "Confirmed" },
-      { name: "Basic Machine Learning", level: "Foundational" },
-      { name: "Data Visualization", level: "Confirmed" },
+      { name: "Web Development", level: "Applied" },
+      { name: "Figma", level: "Proficient" },
+      { name: "Canva", level: "Proficient" },
     ],
   },
   {
@@ -66,13 +66,13 @@ export const skillCategories = [
     ],
   },
   {
-    category: "AI & Technology",
-    description: "Intelligent systems and modern prompt architectures",
+    category: "AI Tools & Framer",
+    description: "Modern generative tools and intelligent workflows",
     color: "emerald",
     skills: [
-      { name: "Artificial Intelligence", level: "Academic Exploration" },
-      { name: "Generative AI", level: "Applied" },
-      { name: "Prompt Engineering", level: "Proficient" },
+      { name: "ChatGPT", level: "Applied" },
+      { name: "Claude", level: "Applied" },
+      { name: "Framer", level: "Applied" },
     ],
   },
 ]

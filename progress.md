@@ -146,6 +146,15 @@ This document records the full development trajectory across all 10 iterations r
   - Removed "Data Analytics & Modeling (Python & SQL)" and "Machine Learning Concepts (Foundational)" from the About section specialties grid in `src/components/sections/About.jsx`.
   - Kept the clean 2-card layout exclusively highlighting Abhishek's live platforms: "Web Application Platforms (Live on Vercel)" and "Interactive 2D Games (Live on Netlify)".
 
+### [Update] — Skills Section Customization
+- **Implemented**:
+  - Removed "Machine Learning" card.
+  - Removed "AI & Prompt Engineering" card.
+  - Renamed "Web Development & React" to "Web Development" (removed "React").
+  - Added "Figma & Canva" card (`Design & Prototyping`, `Proficient`, `Palette` icon).
+  - Added "AI Tools & Framer" card featuring Claude, ChatGPT, and Framer (`Modern Workflow`, `Applied`, `Sparkles` icon).
+  - Maintained the clean 3-column responsive layout across desktop and mobile.
+
 ---
 
 ## Completion Verification

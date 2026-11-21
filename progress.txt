@@ -199,3 +199,14 @@
   - Removed "2023" year specification from BTech education entry, updating to clean "Second Year" in `src/data/portfolioData.js`.
   - Removed "Data Analytics & Modeling (Python & SQL)" and "Machine Learning Concepts (Foundational)" cards from the About section specialties grid in `src/components/sections/About.jsx`, keeping the focused 2-column showcase on live deployed platforms ("Web Application Platforms - Live on Vercel" and "Interactive 2D Games - Live on Netlify").
   - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (0 errors).
+
+### [Update - Skills Section Customization]
+- Status: COMPLETED
+- Actions taken:
+  - Removed "Machine Learning" card.
+  - Removed "AI & Prompt Engineering" card.
+  - Renamed "Web Development & React" to "Web Development" (removed "React").
+  - Added "Figma & Canva" skill card (`Design & Prototyping`, `Proficient`, `Palette` icon).
+  - Added "AI Tools & Framer" skill card featuring Claude, ChatGPT, and Framer (`Modern Workflow`, `Applied`, `Sparkles` icon).
+  - Synchronized categorized skill sets in `src/data/portfolioData.js`.
+  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (537ms, 0 errors).

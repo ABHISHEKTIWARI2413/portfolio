@@ -2,9 +2,9 @@ import React from 'react'
 import {
   Terminal,
   Database,
-  Brain,
   Code2,
   GitBranch,
+  Palette,
   Sparkles,
   Cpu,
 } from 'lucide-react'
@@ -29,20 +29,12 @@ export default function Skills() {
         'Relational data modeling, complex SQL queries, aggregations, and performance-tuned database schemas.',
     },
     {
-      name: 'Machine Learning',
-      domain: 'Data Science',
-      level: 'Foundational',
-      icon: Brain,
-      description:
-        'Predictive modeling, supervised algorithms, feature engineering, and evaluation metrics.',
-    },
-    {
-      name: 'Web Development & React',
-      domain: 'Frontend & UI',
+      name: 'Web Development',
+      domain: 'Frontend & Web',
       level: 'Applied',
       icon: Code2,
       description:
-        'Building responsive, fast, and accessible user interfaces with modern React, Tailwind CSS, and JavaScript.',
+        'Building responsive, fast, and accessible user interfaces with modern HTML5, CSS3, Tailwind CSS, and JavaScript.',
     },
     {
       name: 'Git & GitHub',
@@ -53,12 +45,20 @@ export default function Skills() {
         'Branching strategies, repository management, collaborative workflows, and deployment pipelines.',
     },
     {
-      name: 'AI & Prompt Engineering',
-      domain: 'Emerging Tech',
-      level: 'Active Exploration',
+      name: 'Figma & Canva',
+      domain: 'Design & Prototyping',
+      level: 'Proficient',
+      icon: Palette,
+      description:
+        'Crafting modern UI wireframes, high-fidelity prototypes, brand design systems, and creative visual assets.',
+    },
+    {
+      name: 'AI Tools & Framer',
+      domain: 'Modern Workflow',
+      level: 'Applied',
       icon: Sparkles,
       description:
-        'Leveraging generative AI architectures, structured LLM prompt engineering, and intelligent application design.',
+        'Accelerating development, design, and productivity using Claude, ChatGPT, and Framer for modern digital creations.',
     },
   ]
 
