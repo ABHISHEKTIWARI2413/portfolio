@@ -49,8 +49,15 @@ export default function Navbar() {
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, '#home')}
-          className="flex items-center gap-1.5 group cursor-pointer"
+          className="flex items-center gap-2.5 group cursor-pointer"
         >
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-[#c9f31d]/60 bg-[#161616] p-[1px] shadow-md group-hover:border-[#c9f31d] transition-colors">
+            <img
+              src="/abhishek.png"
+              alt="Abhishek Tiwari"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
           <span className="font-['Urbanist'] font-extrabold text-xl sm:text-2xl text-white tracking-tight group-hover:opacity-90 transition-opacity">
             {personalInfo.name.split(' ')[0]}
             <span className="text-[#c9f31d]">.</span>

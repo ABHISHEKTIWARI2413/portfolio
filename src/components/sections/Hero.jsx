@@ -4,7 +4,6 @@ import {
   ArrowDown,
   ArrowUpRight,
   Mail,
-  Code2,
 } from 'lucide-react'
 import { personalInfo } from '../../data/portfolioData'
 import { Container, Button, CircularBadge, GithubIcon, LinkedinIcon } from '../ui'
@@ -28,7 +27,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-12 pb-20 sm:pt-16 sm:pb-28 overflow-hidden"
+      className="relative pt-10 pb-20 sm:pt-16 sm:pb-28 overflow-hidden"
     >
       {/* Background ambient glow - signature neon lime */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#c9f31d]/10 blur-[150px] rounded-full pointer-events-none" />
@@ -137,7 +136,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Column: Visual Showcase Card & Rotating Badge */}
+          {/* Right Column: Visual Showcase Card with Transparent Portrait & Rotating Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -145,48 +144,53 @@ export default function Hero() {
             className="lg:col-span-5 relative flex justify-center"
           >
             {/* The Main Hero Card */}
-            <div className="relative w-full max-w-md card-xabed p-8 bg-gradient-to-b from-[#181818] to-[#101010] border border-white/10 shadow-2xl flex flex-col items-center text-center">
-              {/* Internal Accent Glow */}
-              <div className="absolute top-0 right-0 w-44 h-44 bg-[#c9f31d]/15 blur-[60px] rounded-full pointer-events-none" />
+            <div className="relative w-full max-w-[420px] rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-[#181818] via-[#121212] to-[#0c0c0c] border border-white/10 shadow-2xl flex flex-col items-center overflow-hidden group">
+              {/* Internal Accent Glow - Electric Lime */}
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-[#c9f31d]/20 blur-[80px] rounded-full pointer-events-none" />
+              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#c9f31d]/10 blur-[70px] rounded-full pointer-events-none" />
 
-              {/* Avatar Centerpiece */}
-              <div className="relative mb-6">
-                <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-3xl bg-gradient-to-tr from-[#1f1f1f] via-[#141414] to-[#262626] border-2 border-[#c9f31d]/40 p-2 shadow-2xl flex items-center justify-center">
-                  <div className="w-full h-full rounded-2xl bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
-                    <span className="text-4xl sm:text-5xl font-black font-['Urbanist'] tracking-tight text-white">
-                      {personalInfo.initials}
-                    </span>
-                  </div>
-                </div>
-                {/* Tech floating icon */}
-                <div className="absolute -bottom-2 -right-2 p-2 rounded-xl bg-[#c9f31d] text-black shadow-lg">
-                  <Code2 className="w-5 h-5" />
+              {/* Arch Backdrop Graphic Container */}
+              <div className="relative w-full h-[370px] sm:h-[420px] rounded-2xl bg-gradient-to-b from-[#1f1f1f] via-[#151515] to-[#0c0c0c] border border-white/[0.08] flex items-end justify-center overflow-hidden">
+                {/* Subtle radial aura behind head */}
+                <div className="absolute top-10 w-48 h-48 rounded-full bg-[#c9f31d]/25 blur-[50px] pointer-events-none" />
+                
+                {/* Arch outline graphic matching Xabed */}
+                <div className="absolute inset-x-8 top-8 bottom-0 rounded-t-full border-t-2 border-x-2 border-[#c9f31d]/25 pointer-events-none" />
+
+                {/* Abhishek's Transparent Cutout Portrait */}
+                <img
+                  src="/abhishek.png"
+                  alt="Abhishek Tiwari"
+                  className="relative z-10 w-full h-full object-cover object-top drop-shadow-[0_20px_25px_rgba(0,0,0,0.9)] transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+
+                {/* Floating pill badge top left */}
+                <div className="absolute top-4 left-4 z-20 px-3.5 py-1.5 rounded-full bg-[#0d0d0d]/90 backdrop-blur-md border border-white/10 flex items-center gap-2 shadow-lg">
+                  <span className="w-2 h-2 rounded-full bg-[#c9f31d] animate-pulse" />
+                  <span className="text-[11px] font-['Urbanist'] font-bold text-white uppercase tracking-wider">
+                    Data Science
+                  </span>
                 </div>
               </div>
 
-              {/* Name & Title in Card */}
-              <h3 className="text-2xl font-bold font-['Urbanist'] text-white mb-1">
-                {personalInfo.name}
-              </h3>
-              <p className="text-xs font-['Urbanist'] text-[#c9f31d] font-semibold tracking-wider uppercase mb-6">
-                {personalInfo.educationQuick}
-              </p>
-
-              {/* Stats Chips inside Card */}
-              <div className="w-full grid grid-cols-2 gap-3 text-left">
-                <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
-                  <span className="text-xl font-extrabold font-['Urbanist'] text-white block">2+</span>
-                  <span className="text-[11px] text-gray-400">Years Learning</span>
+              {/* Card Footer Info */}
+              <div className="w-full mt-5 pt-4 border-t border-white/[0.08] flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-bold font-['Urbanist'] text-white">
+                    {personalInfo.name}
+                  </h3>
+                  <p className="text-xs font-['Urbanist'] text-[#c9f31d] font-semibold">
+                    {personalInfo.educationQuick}
+                  </p>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
-                  <span className="text-xl font-extrabold font-['Urbanist'] text-[#c9f31d] block">Live</span>
-                  <span className="text-[11px] text-gray-400">Web & Game Builds</span>
+                <div className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-[11px] font-mono text-gray-400">
+                  Kanpur, IN
                 </div>
               </div>
             </div>
 
             {/* Rotating Circular Badge overlay from Xabed */}
-            <div className="absolute -bottom-8 -right-4 sm:-right-8 z-20">
+            <div className="absolute -bottom-6 -right-3 sm:-right-6 z-30">
               <CircularBadge text="DATA SCIENCE • DEVELOPER • INNOVATION •" />
             </div>
           </motion.div>

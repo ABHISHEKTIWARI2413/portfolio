@@ -158,3 +158,16 @@
     - **Footer**: Modern dark footer with brand identity, nav links, social profile pills, back-to-top button, and dynamic copyright year.
   - Audited code quality with `oxlint`: **0 warnings, 0 errors** across all 21 project files.
   - Verified production build with `vite build`: Compiled cleanly in **492ms**.
+
+### [Update - Real Cutout Photo Integration]
+- Status: COMPLETED
+- Actions taken:
+  - Processed user-provided portrait photo using AI background removal (`rembg` with bria-rmbg model).
+  - Saved transparent cutout PNG to `public/abhishek.png` and `src/assets/abhishek.png`.
+  - Integrated the cutout portrait into the Hero Section matching the exact Xabed reference design:
+    - Positioned inside a sleek dark showcase card with electric lime ambient spotlight blush and an arch outline backdrop.
+    - Set up floating status chip ("DATA SCIENCE") and bottom student details.
+    - Overlaid the iconic animated spinning circular text badge (`DATA SCIENCE • DEVELOPER • INNOVATION •`) in the corner.
+  - Added mini avatar thumbnail to the floating rounded Navbar next to the logo.
+  - Added avatar thumbnail to the About section story card.
+  - Verified with `oxlint` (0 warnings, 0 errors) and validated production build (`vite build` in 552ms).

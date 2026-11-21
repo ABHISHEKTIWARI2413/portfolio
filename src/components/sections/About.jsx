@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sparkles, ArrowUpRight, Mail, Compass } from 'lucide-react'
+import { Sparkles, ArrowUpRight, Mail } from 'lucide-react'
 import { personalInfo } from '../../data/portfolioData'
 import { Container, SectionHeading, Card, Button, Badge } from '../ui'
 
@@ -27,9 +27,13 @@ export default function About() {
           <div className="lg:col-span-7">
             <Card className="h-full flex flex-col justify-between border-white/10 hover:border-[#c9f31d]/50">
               <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-[#1d1d1d] border border-white/10 flex items-center justify-center text-[#c9f31d]">
-                    <Compass className="w-5 h-5" />
+                <div className="flex items-center gap-3.5 mb-6">
+                  <div className="w-12 h-12 rounded-2xl overflow-hidden border border-[#c9f31d]/60 bg-[#161616] p-[1px] shadow-md shrink-0">
+                    <img
+                      src="/abhishek.png"
+                      alt="Abhishek Tiwari"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold font-['Urbanist'] text-white">
