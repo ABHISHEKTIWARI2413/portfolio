@@ -90,7 +90,6 @@ export const projects = [
       "Deployed and accessible live on Vercel"
     ],
     tags: ["React", "JavaScript", "Tailwind CSS", "Vercel", "Web App"],
-    githubUrl: "https://github.com/ABHISHEKTIWARI2413",
     demoUrl: "https://campus-share-sigma.vercel.app/",
     status: "Live Project",
     accent: "purple",
@@ -107,7 +106,6 @@ export const projects = [
       "Deployed and playable live on Netlify"
     ],
     tags: ["JavaScript", "HTML5 Canvas", "Game Mechanics", "Netlify"],
-    githubUrl: "https://github.com/ABHISHEKTIWARI2413",
     demoUrl: "https://pixelfightershooting.netlify.app/",
     status: "Live Project",
     accent: "indigo",

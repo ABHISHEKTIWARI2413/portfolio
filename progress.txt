@@ -134,3 +134,10 @@
     1. **CampusShare**: [https://campus-share-sigma.vercel.app/](https://campus-share-sigma.vercel.app/)
     2. **Dusk Compound Game**: [https://pixelfightershooting.netlify.app/](https://pixelfightershooting.netlify.app/)
   - Verified with `oxlint` (0 warnings, 0 errors) and validated production build (`npm run build` in 499ms).
+
+### [Update - Project GitHub Buttons Removed]
+- Status: COMPLETED
+- Actions taken:
+  - Removed project-specific GitHub repository buttons from CampusShare and Dusk Compound Game cards as requested.
+  - Upgraded each project card's call-to-action to a prominent full-width "Launch Live Demo" button directly connecting to the active deployments.
+  - Verified with `oxlint` (0 warnings, 0 errors) and validated production build (`npm run build` in 524ms).

@@ -6,7 +6,7 @@ import {
   ExternalLink,
 } from 'lucide-react'
 import { projects } from '../../data/portfolioData'
-import { Container, SectionHeading, Card, Badge, Button, GithubIcon } from '../ui'
+import { Container, SectionHeading, Card, Badge, Button } from '../ui'
 
 export default function Projects() {
   const getProjectIcon = (id) => {
@@ -101,7 +101,7 @@ export default function Projects() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex items-center gap-2.5">
+                  <div className="pt-2">
                     <Button
                       variant="primary"
                       size="sm"
@@ -109,19 +109,9 @@ export default function Projects() {
                       target="_blank"
                       icon={ExternalLink}
                       iconPosition="right"
-                      className="flex-1 justify-center shadow-purple-600/20"
+                      className="w-full justify-center shadow-purple-600/20"
                     >
-                      Live Demo
-                    </Button>
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      href={project.githubUrl}
-                      target="_blank"
-                      icon={GithubIcon}
-                      className="flex-1 justify-center"
-                    >
-                      GitHub
+                      Launch Live Demo
                     </Button>
                   </div>
                 </div>
