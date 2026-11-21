@@ -4,6 +4,7 @@ import {
   ArrowDown,
   ArrowUpRight,
   Mail,
+  MapPin,
 } from 'lucide-react'
 import { personalInfo } from '../../data/portfolioData'
 import { Container, Button, CircularBadge, GithubIcon, LinkedinIcon } from '../ui'
@@ -164,10 +165,18 @@ export default function Hero() {
                     Data Science
                   </span>
                 </div>
+
+                {/* Floating location pill top right */}
+                <div className="absolute top-4 right-4 z-20 px-3 py-1.5 rounded-full bg-[#0d0d0d]/90 backdrop-blur-md border border-white/10 flex items-center gap-1.5 shadow-lg">
+                  <MapPin className="w-3.5 h-3.5 text-[#c9f31d]" />
+                  <span className="text-[11px] font-['Urbanist'] font-bold text-gray-200 uppercase tracking-wider">
+                    Kanpur, India
+                  </span>
+                </div>
               </div>
 
               {/* Card Footer Info */}
-              <div className="w-full mt-5 pt-4 border-t border-white/[0.08] flex items-center justify-between">
+              <div className="w-full mt-5 pt-4 border-t border-white/[0.08] flex items-center justify-between pr-24">
                 <div>
                   <h3 className="text-xl font-bold font-['Urbanist'] text-white">
                     {personalInfo.name}
@@ -175,9 +184,10 @@ export default function Hero() {
                   <p className="text-xs font-['Urbanist'] text-[#c9f31d] font-semibold">
                     {personalInfo.educationQuick}
                   </p>
-                </div>
-                <div className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-[11px] font-mono text-gray-400">
-                  Kanpur, IN
+                  <div className="flex items-center gap-1.5 mt-2 text-xs text-gray-300 font-['Urbanist'] font-medium">
+                    <MapPin className="w-3.5 h-3.5 text-[#c9f31d]" />
+                    <span>Kanpur, India</span>
+                  </div>
                 </div>
               </div>
             </div>

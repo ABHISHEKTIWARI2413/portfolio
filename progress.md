@@ -155,6 +155,13 @@ This document records the full development trajectory across all 10 iterations r
   - Added "AI Tools & Framer" card featuring Claude, ChatGPT, and Framer (`Modern Workflow`, `Applied`, `Sparkles` icon).
   - Maintained the clean 3-column responsive layout across desktop and mobile.
 
+### [Update] — Location Display Fix & Certification Credentials Removal
+- **Implemented**:
+  - Resolved overlap between the rotating circular badge and location badge in the Hero section.
+  - Positioned location under Abhishek's name and education with a dedicated `MapPin` icon, explicitly displaying **"Kanpur, India"**.
+  - Added matching top-right location badge on the photo container.
+  - Removed "Verify Credential" buttons and placeholder URLs from the Certifications cards.
+
 ---
 
 ## Completion Verification

@@ -210,3 +210,14 @@
   - Added "AI Tools & Framer" skill card featuring Claude, ChatGPT, and Framer (`Modern Workflow`, `Applied`, `Sparkles` icon).
   - Synchronized categorized skill sets in `src/data/portfolioData.js`.
   - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (537ms, 0 errors).
+
+### [Update - Location Display Fix & Certification Credentials Removal]
+- Status: COMPLETED
+- Actions taken:
+  - Fixed location display in Hero section:
+    - Resolved collision between rotating circular badge and location badge by moving location to the left under Abhishek's name/education and adding a dedicated top-right card badge.
+    - Updated display text from "Kanpur, IN" to explicit "Kanpur, India" with MapPin icon.
+  - Removed credential verification options from Certifications:
+    - Removed "Verify Credential" buttons and placeholder credential URLs from certification cards.
+    - Updated section accent title to "Course Certifications".
+  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (527ms, 0 errors).

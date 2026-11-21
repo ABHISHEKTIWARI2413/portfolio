@@ -1,14 +1,9 @@
 import React from 'react'
-import { Award, ExternalLink, ShieldCheck } from 'lucide-react'
+import { Award, ShieldCheck } from 'lucide-react'
 import { certifications } from '../../data/portfolioData'
-import { Container, SectionHeading, Card, Badge, Button } from '../ui'
+import { Container, SectionHeading, Card, Badge } from '../ui'
 
 export default function Certifications() {
-  const handleVerifyClick = (e, cert) => {
-    e.preventDefault()
-    alert(`Certificate: "${cert.title}" by ${cert.issuer}. Verified learning milestone. Official verification URL configured as placeholder as per PRD requirements.`)
-  }
-
   return (
     <section id="certifications" className="py-20 sm:py-28 relative">
       <Container size="lg">
@@ -16,7 +11,7 @@ export default function Certifications() {
           tag="Certifications"
           tagIcon={Award}
           title="Verified Learning &"
-          accentTitle="Industry Credentials"
+          accentTitle="Course Certifications"
           subtitle="Confirmed certifications reflecting dedication to continuous learning and fundamental skill acquisition."
         />
 
@@ -44,7 +39,7 @@ export default function Certifications() {
                   {cert.issuer}
                 </p>
 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2">
                   <span className="text-[11px] uppercase tracking-wider text-gray-500 font-['Urbanist'] font-bold">
                     Competencies:
                   </span>
@@ -60,27 +55,8 @@ export default function Certifications() {
                   </div>
                 </div>
               </div>
-
-              <div className="pt-4 border-t border-white/[0.08]">
-                <Button
-                  variant="dark"
-                  size="sm"
-                  onClick={(e) => handleVerifyClick(e, cert)}
-                  icon={ExternalLink}
-                  iconPosition="right"
-                  className="w-full justify-center text-xs"
-                >
-                  Verify Credential
-                </Button>
-              </div>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-xs text-gray-500 font-mono">
-            * All credentials represent genuine student courses completed without fabricated dates or IDs.
-          </p>
         </div>
       </Container>
     </section>
