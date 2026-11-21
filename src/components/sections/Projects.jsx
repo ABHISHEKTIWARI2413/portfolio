@@ -4,6 +4,7 @@ import {
   ShieldAlert,
   Gamepad2,
   Users2,
+  ExternalLink,
   Info,
 } from 'lucide-react'
 import { projects } from '../../data/portfolioData'
@@ -12,20 +13,20 @@ import { Container, SectionHeading, Card, Badge, Button, GithubIcon } from '../u
 export default function Projects() {
   const getProjectIcon = (id) => {
     switch (id) {
-      case 'campusxchange':
+      case 'campusshare':
         return Users2
+      case 'dusk-compound-game':
+        return Gamepad2
       case 'scamshield-ai':
         return ShieldAlert
-      case 'project-rush':
-        return Gamepad2
       default:
         return FolderGit2
     }
   }
 
-  const handleDemoClick = (e, project) => {
+  const handleInfoClick = (e, project) => {
     e.preventDefault()
-    alert(`"${project.title}" is currently in ${project.status.toLowerCase()} phase. In compliance with verified portfolio standards, no fabricated live links are used.`)
+    alert(`"${project.title}" is currently in ${project.status.toLowerCase()} phase. Research and architecture are actively being developed.`)
   }
 
   return (
@@ -36,12 +37,13 @@ export default function Projects() {
           tagIcon={FolderGit2}
           title="Innovative Concepts &"
           accentTitle="Active Builds"
-          subtitle="Explore selected academic, campus-focused, and machine learning software concepts developed with modern architectures."
+          subtitle="Explore selected deployed web platforms, interactive browser games, and machine learning research concepts."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project) => {
             const Icon = getProjectIcon(project.id)
+            const isLive = Boolean(project.demoUrl)
 
             return (
               <Card
@@ -62,7 +64,12 @@ export default function Projects() {
                     </span>
 
                     <div className="absolute top-3 right-3">
-                      <Badge variant="outline" size="sm" className="bg-[#090a10]/80 backdrop-blur-sm border-white/10 text-gray-300">
+                      <Badge
+                        variant={isLive ? 'emerald' : 'outline'}
+                        size="sm"
+                        className={isLive ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300' : 'bg-[#090a10]/80 backdrop-blur-sm border-white/10 text-gray-300'}
+                      >
+                        {isLive && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1" />}
                         {project.status}
                       </Badge>
                     </div>
@@ -105,6 +112,30 @@ export default function Projects() {
 
                   {/* Action Buttons */}
                   <div className="flex items-center gap-2.5">
+                    {isLive ? (
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        href={project.demoUrl}
+                        target="_blank"
+                        icon={ExternalLink}
+                        iconPosition="right"
+                        className="flex-1 justify-center shadow-purple-600/20"
+                      >
+                        Live Demo
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={(e) => handleInfoClick(e, project)}
+                        icon={Info}
+                        className="flex-1 justify-center text-gray-300"
+                      >
+                        Research Info
+                      </Button>
+                    )}
+
                     <Button
                       variant="secondary"
                       size="sm"
@@ -113,16 +144,7 @@ export default function Projects() {
                       icon={GithubIcon}
                       className="flex-1 justify-center"
                     >
-                      Repository
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={(e) => handleDemoClick(e, project)}
-                      icon={Info}
-                      className="flex-1 justify-center text-gray-300"
-                    >
-                      Status
+                      GitHub
                     </Button>
                   </div>
                 </div>
@@ -133,7 +155,7 @@ export default function Projects() {
 
         <div className="mt-8 text-center">
           <p className="text-xs text-gray-500 font-mono">
-            * All project entries represent genuine student concepts and active builds. In compliance with portfolio guidelines, unfinished concepts are not falsely claimed as deployed.
+            * Live projects are hosted and accessible online. Concept builds are clearly marked in compliance with verified portfolio standards.
           </p>
         </div>
       </Container>

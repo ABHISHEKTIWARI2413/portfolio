@@ -25,7 +25,7 @@ export default function About() {
       icon: Code2,
       title: 'Student Innovation',
       description:
-        'Actively designing and prototyping projects like CampusXchange and ScamShield AI while advancing in academics.',
+        'Actively designing and prototyping projects like CampusShare and Dusk Compound Game while advancing in academics.',
       badge: 'Collaborative',
       color: 'indigo',
     },

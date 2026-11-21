@@ -12,9 +12,9 @@ This document records the full development trajectory across all 10 iterations r
 | **Iteration 2** | Task 2: Design System | ✅ COMPLETED | Dark tokens, glassmorphism utilities, reusable UI component library |
 | **Iteration 3** | Task 3: Navigation and Hero | ✅ COMPLETED | Sticky navbar with scroll-spy, initials avatar, hero CTAs & socials |
 | **Iteration 4** | Task 4: About and Skills | ✅ COMPLETED | PSIT academic story, 4 categorized skill groups (confirmed only) |
-| **Iteration 5** | Task 5: Projects | ✅ COMPLETED | CampusXchange, ScamShield AI, Project Rush with honest staging |
+| **Iteration 5** | Task 5: Projects | ✅ COMPLETED | CampusShare (Live on Vercel), Dusk Compound Game (Live on Netlify), ScamShield AI |
 | **Iteration 6** | Task 6: Education & Certifications | ✅ COMPLETED | BTech curriculum, 3 confirmed certifications, 3 key achievements |
-| **Iteration 7** | Task 7: Contact and Footer | ✅ COMPLETED | Mailto quick launcher, email clipboard copy, dynamic footer |
+| **Iteration 7** | Task 7: Contact and Footer | ✅ COMPLETED | Verified GitHub & LinkedIn profiles, Mailto quick launcher, email clipboard copy |
 | **Iteration 8** | Task 8: Animations & Responsiveness | ✅ COMPLETED | Mobile hamburger drawer, viewport entrances, zero overflow |
 | **Iteration 9** | Task 9: Testing & Optimization | ✅ COMPLETED | Oxlint 0 warnings/0 errors, production build sub-500ms |
 | **Iteration 10** | Task 10: Final Review & Docs | ✅ COMPLETED | Full README.md, deployment guide, placeholder identification |
@@ -71,14 +71,13 @@ This document records the full development trajectory across all 10 iterations r
     - Fully adheres to PRD: no false seniority claims.
 
 ### [Iteration 5] — Task 5: Projects
-- **Goal**: Create featured project cards.
+- **Goal**: Create featured project cards with active builds.
 - **Implemented**:
   - `src/components/sections/Projects.jsx`:
-    - **CampusXchange**: Campus resource-sharing & micro-task platform.
-    - **ScamShield AI**: AI-powered fraud & scam detection concept.
-    - **Project Rush**: Indian railway & city themed endless-runner game concept.
-  - Each card includes: Visual concept banner, description, highlights list, tech badges, repository button, and status indicator.
-  - Adheres strictly to PRD Section 5: Unfinished projects are staged as active builds/concepts rather than falsely claiming live deployments.
+    - **CampusShare**: Deployed campus resource & notes sharing platform (Live on Vercel: `https://campus-share-sigma.vercel.app/`).
+    - **Dusk Compound Game**: Deployed retro 2D pixel shooter & combat game (Live on Netlify: `https://pixelfightershooting.netlify.app/`).
+    - **ScamShield AI**: AI-powered fraud & scam detection research concept.
+  - Interactive cards featuring direct "Live Demo" buttons with external link badges, GitHub repository buttons, highlights, tech tags, and live status pulses.
 
 ### [Iteration 6] — Task 6: Education and Certifications
 - **Goal**: Implement education timeline, credentials, and achievements.
@@ -138,3 +137,4 @@ This document records the full development trajectory across all 10 iterations r
 - [x] Zero linter errors (`oxlint` passes cleanly).
 - [x] Missing personal information clearly identified in documentation.
 - [x] README.md contains full setup and deployment instructions.
+

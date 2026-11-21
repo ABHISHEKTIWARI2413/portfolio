@@ -7,7 +7,7 @@ export const personalInfo = {
   bio: [
     "Currently in my second year of Bachelor of Technology in Data Science at Pranveer Singh Institute of Technology, I focus on transforming data into actionable insights and developing intelligent digital tools.",
     "My core interests lie at the intersection of Machine Learning, predictive data analysis, and scalable web software. I enjoy taking foundational computer science concepts and applying them directly to solve everyday real-world problems.",
-    "Whether collaborating on campus platforms, training predictive models, or exploring emerging generative AI workflows, I am committed to continuous learning and building software with measurable impact."
+    "Whether collaborating on live campus platforms like CampusShare, building interactive games like Dusk Compound, or exploring emerging machine learning workflows, I am committed to continuous learning and building software with measurable impact."
   ],
   educationQuick: "BTech Data Science • 2nd Year at PSIT",
   institution: "Pranveer Singh Institute of Technology",
@@ -17,8 +17,8 @@ export const personalInfo = {
   status: "Open to Internships & Collaborative Projects",
   email: "abhi13tiwari@gmail.com",
   socials: {
-    github: "https://github.com/Abhishektiwari1324",
-    linkedin: "https://linkedin.com/in/placeholder-abhishektiwari", // Editable placeholder
+    github: "https://github.com/ABHISHEKTIWARI2413",
+    linkedin: "https://www.linkedin.com/in/tiwariabhishek19",
     email: "mailto:abhi13tiwari@gmail.com",
   },
   resumeUrl: "#resume", // Placeholder as per PRD
@@ -79,21 +79,38 @@ export const skillCategories = [
 
 export const projects = [
   {
-    id: "campusxchange",
-    title: "CampusXchange",
-    type: "Campus Platform / Web Concept",
+    id: "campusshare",
+    title: "CampusShare",
+    type: "Campus Resource & Note Sharing Platform",
     description:
-      "A campus resource-sharing and micro-task platform designed to connect students, streamline peer assistance, and enable efficient resource circulation within collegiate environments.",
+      "A full-fledged campus platform designed to connect students, streamline peer assistance, share study notes, and enable efficient resource circulation across collegiate environments.",
     keyPoints: [
-      "Peer-to-peer resource marketplace and notes sharing",
-      "Micro-task coordination for collaborative academic projects",
-      "Clean, accessible student-first user interface"
+      "Student resource sharing and verified peer assistance",
+      "Clean, modern responsive UI tailored for campus communities",
+      "Deployed and accessible live on Vercel"
     ],
-    tags: ["React", "JavaScript", "Tailwind CSS", "Resource Sharing"],
-    githubUrl: "https://github.com/Abhishektiwari1324/campusxchange", // Placeholder repository link
-    demoUrl: null, // Placeholder: concept in development
-    status: "In Development",
+    tags: ["React", "JavaScript", "Tailwind CSS", "Vercel", "Web App"],
+    githubUrl: "https://github.com/ABHISHEKTIWARI2413",
+    demoUrl: "https://campus-share-sigma.vercel.app/",
+    status: "Live Project",
     accent: "purple",
+  },
+  {
+    id: "dusk-compound-game",
+    title: "Dusk Compound Game",
+    type: "2D Pixel Fighter & Shooting Game",
+    description:
+      "An action-packed retro 2D pixel shooter and arena fighting game featuring smooth canvas animations, dynamic obstacle physics, combat controls, and real-time score tracking.",
+    keyPoints: [
+      "Interactive 2D physics and fast-paced combat mechanisms",
+      "Dynamic enemy spawning and responsive keyboard controls",
+      "Deployed and playable live on Netlify"
+    ],
+    tags: ["JavaScript", "HTML5 Canvas", "Game Mechanics", "Netlify"],
+    githubUrl: "https://github.com/ABHISHEKTIWARI2413",
+    demoUrl: "https://pixelfightershooting.netlify.app/",
+    status: "Live Project",
+    accent: "indigo",
   },
   {
     id: "scamshield-ai",
@@ -107,27 +124,10 @@ export const projects = [
       "Privacy-first architecture intended for everyday consumer safety"
     ],
     tags: ["Python", "Machine Learning", "NLP", "Fraud Detection"],
-    githubUrl: "https://github.com/Abhishektiwari1324/scamshield-ai", // Placeholder repository link
+    githubUrl: "https://github.com/ABHISHEKTIWARI2413",
     demoUrl: null, // Concept / research phase
     status: "Research Concept",
     accent: "blue",
-  },
-  {
-    id: "project-rush",
-    title: "Project Rush",
-    type: "Endless-Runner Game Concept",
-    description:
-      "An endless-runner game concept based on an Indian city and railway-track environment, featuring dynamic obstacles, thematic assets, and responsive character physics.",
-    keyPoints: [
-      "Thematic obstacles inspired by Indian railway & city infrastructure",
-      "Fast-paced state loops and obstacle generation mechanics",
-      "Optimized for smooth framerates and responsive player input"
-    ],
-    tags: ["Game Design", "State Logic", "Physics", "Interactive"],
-    githubUrl: "https://github.com/Abhishektiwari1324/project-rush", // Placeholder repository link
-    demoUrl: null, // In concept phase
-    status: "Prototype Concept",
-    accent: "indigo",
   },
 ]
 
@@ -152,8 +152,8 @@ export const certifications = [
     id: "cert-hackerrank-sql",
     title: "Basic SQL",
     issuer: "HackerRank",
-    date: "Verified Learning Milestone", // Placeholder date
-    credentialUrl: "https://www.hackerrank.com/certificates/placeholder", // Placeholder credential
+    date: "Verified Learning Milestone",
+    credentialUrl: "https://www.hackerrank.com/certificates/placeholder",
     skills: ["SQL", "Relational Databases", "Data Querying"],
     badgeColor: "emerald",
   },
@@ -161,8 +161,8 @@ export const certifications = [
     id: "cert-aws-ml",
     title: "AWS Foundations: Machine Learning",
     issuer: "Amazon Web Services (AWS)",
-    date: "Verified Learning Milestone", // Placeholder date
-    credentialUrl: "https://aws.amazon.com/placeholder-verification", // Placeholder credential
+    date: "Verified Learning Milestone",
+    credentialUrl: "https://aws.amazon.com/placeholder-verification",
     skills: ["Machine Learning Concepts", "Cloud AI", "Model Training Basics"],
     badgeColor: "purple",
   },
@@ -170,8 +170,8 @@ export const certifications = [
     id: "cert-apna-college-git",
     title: "Git and GitHub Learning",
     issuer: "Apna College",
-    date: "Verified Learning Milestone", // Placeholder date
-    credentialUrl: "https://apnacollege.in/placeholder-certificate", // Placeholder credential
+    date: "Verified Learning Milestone",
+    credentialUrl: "https://apnacollege.in/placeholder-certificate",
     skills: ["Git Version Control", "GitHub Collaboration", "Branching & Merging"],
     badgeColor: "blue",
   },
@@ -189,7 +189,7 @@ export const achievements = [
     title: "Campus Project Development",
     category: "Product Innovation",
     description:
-      "Initiated and architected CampusXchange and ScamShield AI to address practical pain points faced by students and everyday digital users.",
+      "Initiated and architected CampusShare and Dusk Compound Game to address practical student resource sharing and interactive browser gaming.",
     icon: "Rocket",
   },
   {
