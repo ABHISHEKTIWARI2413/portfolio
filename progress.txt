@@ -125,3 +125,12 @@
     - **Dusk Compound Game**: Added live browser game deployment link `https://pixelfightershooting.netlify.app/`.
   - Configured interactive "Live Demo" buttons linking directly to deployed applications with live status pills.
   - Successfully validated with `oxlint` (0 errors, 0 warnings) and verified production build with `vite build`.
+
+### [Update - ScamShield AI Removed]
+- Status: COMPLETED
+- Actions taken:
+  - Removed ScamShield AI from project listings and project components as requested.
+  - Formatted featured projects section with an optimized 2-column layout focused exclusively on live deployed projects:
+    1. **CampusShare**: [https://campus-share-sigma.vercel.app/](https://campus-share-sigma.vercel.app/)
+    2. **Dusk Compound Game**: [https://pixelfightershooting.netlify.app/](https://pixelfightershooting.netlify.app/)
+  - Verified with `oxlint` (0 warnings, 0 errors) and validated production build (`npm run build` in 499ms).

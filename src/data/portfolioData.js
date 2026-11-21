@@ -112,23 +112,6 @@ export const projects = [
     status: "Live Project",
     accent: "indigo",
   },
-  {
-    id: "scamshield-ai",
-    title: "ScamShield AI",
-    type: "AI & Machine Learning Concept",
-    description:
-      "An AI-powered concept for detecting potentially fraudulent messages, analyzing linguistic indicators, and helping users identify online and SMS scams before falling victim.",
-    keyPoints: [
-      "Natural language analysis for phishing pattern detection",
-      "Explainable scam likelihood scoring for suspect text messages",
-      "Privacy-first architecture intended for everyday consumer safety"
-    ],
-    tags: ["Python", "Machine Learning", "NLP", "Fraud Detection"],
-    githubUrl: "https://github.com/ABHISHEKTIWARI2413",
-    demoUrl: null, // Concept / research phase
-    status: "Research Concept",
-    accent: "blue",
-  },
 ]
 
 export const educationData = [
