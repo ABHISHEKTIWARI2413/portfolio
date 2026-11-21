@@ -229,3 +229,11 @@
   - Configured `resumeUrl: "/Abhishek_Tiwari_Resume.pdf"` in `src/data/portfolioData.js`.
   - Updated Hero section CTA button from "Download CV" to "Download Resume" with direct download trigger and new-tab preview fallback.
   - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (461ms, 0 errors).
+
+### [Update - GitHub Repository Deployment]
+- Status: COMPLETED
+- Actions taken:
+  - Created public GitHub repository on official user account: `https://github.com/ABHISHEKTIWARI2413/portfolio`.
+  - Configured Git remote `origin` to `https://github.com/ABHISHEKTIWARI2413/portfolio.git`.
+  - Pushed all project source code, assets, commits, and configurations to `main` branch.
+  - Cleaned up temporary tool artifacts, leaving working directory clean.

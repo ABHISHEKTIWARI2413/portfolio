@@ -168,6 +168,12 @@ This document records the full development trajectory across all 10 iterations r
   - Configured `resumeUrl: "/Abhishek_Tiwari_Resume.pdf"` in `src/data/portfolioData.js`.
   - Renamed Hero CTA button from "Download CV" to "Download Resume", configuring direct download and browser preview attributes.
 
+### [Update] — GitHub Repository Deployment
+- **Implemented**:
+  - Created public GitHub repository on official user account: `https://github.com/ABHISHEKTIWARI2413/portfolio`.
+  - Configured Git remote `origin` to `https://github.com/ABHISHEKTIWARI2413/portfolio.git`.
+  - Pushed all project source code, assets, commits, and configurations to `main` branch.
+
 ---
 
 ## Completion Verification
