@@ -29,6 +29,7 @@ export const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Designs", href: "#designs" },
   { name: "Education", href: "#education" },
   { name: "Certifications", href: "#certifications" },
   { name: "Contact", href: "#contact" },
@@ -109,6 +110,54 @@ export const projects = [
     demoUrl: "https://pixelfightershooting.netlify.app/",
     status: "Live Project",
     accent: "indigo",
+  },
+]
+
+export const graphicDesigns = [
+  {
+    id: "puma-instagram-ad",
+    title: "AI-Assisted Puma Advertisement Design",
+    type: "Social Media Campaign",
+    tools: ["Canva", "AI Tools", "Digital Marketing"],
+    description:
+      "Designed a high-impact Instagram advertising campaign for Puma Shoes using Canva and modern generative AI tools. Formatted for high engagement with structured visual hierarchy, athletic contrast, and conversion-focused typography.",
+    highlights: [
+      "AI-driven concept ideation and creative visual generation",
+      "Created with Canva applying sport marketing design principles",
+      "Optimized for 1:1 feed posts and 9:16 Instagram story formats"
+    ],
+    image: "/design_puma_ad.png",
+    badge: "Canva & AI",
+  },
+  {
+    id: "campus-promotional-posters",
+    title: "Tech Summit & Hackathon Posters",
+    type: "Event Branding & Posters",
+    tools: ["Figma", "Canva", "Typography"],
+    description:
+      "Engineered promotional posters and digital announcements for college technical events, coding summits, and student community drives featuring futuristic dark-mode aesthetics.",
+    highlights: [
+      "High-contrast visual hierarchy prioritizing schedule, speakers, and registration",
+      "Dynamic typography pairings and clean geometric layout structures",
+      "Multi-platform export formats for Instagram, LinkedIn, and print banners"
+    ],
+    image: "/design_event_poster.png",
+    badge: "Event Branding",
+  },
+  {
+    id: "brand-identity-ui-kit",
+    title: "Digital Brand Identity & Asset Kit",
+    type: "Brand Design & Assets",
+    tools: ["Figma", "Canva", "Design Systems"],
+    description:
+      "Comprehensive visual branding system featuring cohesive color palettes, typography scales, social media post templates, and vector iconography designed in Figma and Canva.",
+    highlights: [
+      "Modern minimalist aesthetic curated for technology products",
+      "Modular social media component templates for continuous posting",
+      "Exported in high-resolution vector and raster assets"
+    ],
+    image: "/design_brand_kit.png",
+    badge: "Design System",
   },
 ]
 

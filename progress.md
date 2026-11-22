@@ -174,6 +174,13 @@ This document records the full development trajectory across all 10 iterations r
   - Configured Git remote `origin` to `https://github.com/ABHISHEKTIWARI2413/portfolio.git`.
   - Pushed all project source code, assets, commits, and configurations to `main` branch.
 
+### [Update] — Graphic Design Showcase Section
+- **Implemented**:
+  - Added dedicated Graphic Design showcase section (`src/components/sections/GraphicDesign.jsx`).
+  - Added "Designs" navigation link in sticky navbar (`#designs`).
+  - Featured Abhishek's creative projects: Puma Instagram Advertisement Campaign (Canva & AI), Campus Tech Summit Event Posters (Figma & Canva), and Digital Brand Identity & UI Kits.
+  - Included interactive preview modals, tool badges, and responsive layouts.
+
 ---
 
 ## Completion Verification

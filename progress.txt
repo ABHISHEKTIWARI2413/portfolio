@@ -237,3 +237,16 @@
   - Configured Git remote `origin` to `https://github.com/ABHISHEKTIWARI2413/portfolio.git`.
   - Pushed all project source code, assets, commits, and configurations to `main` branch.
   - Cleaned up temporary tool artifacts, leaving working directory clean.
+
+### [Update - Graphic Design Showcase Section]
+- Status: COMPLETED
+- Actions taken:
+  - Built and added dedicated Graphic Design showcase section (`src/components/sections/GraphicDesign.jsx`).
+  - Added "Designs" navigation link in sticky navbar (`#designs`).
+  - Featured Abhishek's creative design portfolio:
+    1. **AI-Assisted Puma Advertisement Design** (Canva & Generative AI, social media campaign).
+    2. **Tech Summit & Hackathon Posters** (Figma & Canva, event branding and marketing creatives).
+    3. **Digital Brand Identity & Asset Kit** (Figma & Canva, modern tech brand systems).
+  - Designed interactive cards with visual previews, tool tags, key highlights, and an interactive full-detail modal preview.
+  - Added preview assets in `public/` and `src/assets/`.
+  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (2.37s, 0 errors).
