@@ -24,7 +24,7 @@ export default function GraphicDesign() {
           subtitle="Showcasing commercial advertisements, promotional posters, and digital branding assets designed with Canva, Figma, and AI creative tools."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {graphicDesigns.map((design, index) => {
             const number = `0${index + 1}.`
 

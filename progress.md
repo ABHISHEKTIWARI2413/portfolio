@@ -182,7 +182,8 @@ This document records the full development trajectory across all 10 iterations r
     1. **Pepsi • 'Refresh Your Mood' Commercial Poster** (Product manipulation, water/ice splash effects, commercial advertising layout).
     2. **GTA 6 Reaction YouTube Thumbnail (Mythpat)** (16:9 high-CTR gaming thumbnail, Vice City synthwave neon grading, expressive cutout).
     3. **GTA 6 'Is Here?!' Vertical Reel & Shorts Graphic** (9:16 mobile canvas, comic action callouts, high-contrast yellow brush banners).
-  - Designed interactive cards with blurred ambient backdrops, tool badges, and full-resolution uncropped modal inspections.
+    4. **BGMI Esports 'The Ultimate Showdown' Thumbnail** (16:9 matchup thumbnail, Jonathan vs. Spower, dual red/gold battle atmosphere, Krafton badges).
+  - Designed interactive cards in a balanced 2-column grid with blurred ambient backdrops, tool badges, and full-resolution uncropped modal inspections.
 
 ---
 

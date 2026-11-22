@@ -162,6 +162,22 @@ export const graphicDesigns = [
     badge: "Shorts / Reel 9:16",
     aspect: "vertical",
   },
+  {
+    id: "bgmi-showdown-thumbnail",
+    title: "BGMI Esports 'The Ultimate Showdown' Thumbnail",
+    type: "Esports Tournament Thumbnail (16:9)",
+    tools: ["Canva", "Esports Branding", "Color Grading", "Action Typography"],
+    description:
+      "High-energy competitive esports matchup thumbnail for Battlegrounds Mobile India (BGMI) featuring Jonathan (Team Apex Gaming) vs. Spower (GodLike Esports). Built with dual-tone red vs. gold atmospheric battle lighting and dynamic brush lettering.",
+    highlights: [
+      "Dual split atmosphere (Apex fiery crimson vs. GodLike electric amber gold)",
+      "High-impact distressed brush typography ('VS' & 'The Ultimate Showdown')",
+      "Official team crests (Apex Gaming & GodLike Esports) and BGMI Krafton tournament badges"
+    ],
+    image: "/graphic_bgmi_esports.jpg",
+    badge: "Esports 16:9",
+    aspect: "landscape",
+  },
 ]
 
 export const educationData = [
