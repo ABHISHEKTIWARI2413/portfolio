@@ -243,10 +243,10 @@
 - Actions taken:
   - Built and added dedicated Graphic Design showcase section (`src/components/sections/GraphicDesign.jsx`).
   - Added "Designs" navigation link in sticky navbar (`#designs`).
-  - Featured Abhishek's creative design portfolio:
-    1. **AI-Assisted Puma Advertisement Design** (Canva & Generative AI, social media campaign).
-    2. **Tech Summit & Hackathon Posters** (Figma & Canva, event branding and marketing creatives).
-    3. **Digital Brand Identity & Asset Kit** (Figma & Canva, modern tech brand systems).
-  - Designed interactive cards with visual previews, tool tags, key highlights, and an interactive full-detail modal preview.
-  - Added preview assets in `public/` and `src/assets/`.
-  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (2.37s, 0 errors).
+  - Integrated Abhishek's authentic graphic design creations:
+    1. **Pepsi • 'Refresh Your Mood' Commercial Poster** (Product manipulation, water/ice splash effects, conversion-focused advertising typography).
+    2. **GTA 6 Reaction YouTube Thumbnail (Mythpat)** (16:9 high-CTR gaming thumbnail, Vice City synthwave neon grading, expressive cutout).
+    3. **GTA 6 'Is Here?!' Vertical Reel & Shorts Graphic** (9:16 mobile canvas, comic action callouts, high-contrast yellow brush banners).
+  - Designed interactive cards with high-definition previews, blurred ambient backdrops, tool badges, and full-resolution uncropped modal inspections.
+  - Saved authentic assets in `public/` and `src/assets/`.
+  - Verified with `oxlint` (0 errors, 0 warnings) and compiled with `vite build` (545ms, 0 errors).

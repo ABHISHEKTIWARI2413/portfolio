@@ -115,49 +115,52 @@ export const projects = [
 
 export const graphicDesigns = [
   {
-    id: "puma-instagram-ad",
-    title: "AI-Assisted Puma Advertisement Design",
-    type: "Social Media Campaign",
-    tools: ["Canva", "AI Tools", "Digital Marketing"],
+    id: "pepsi-advertisement",
+    title: "Pepsi • 'Refresh Your Mood' Commercial Poster",
+    type: "Commercial Product Advertisement",
+    tools: ["Canva", "Product Manipulation", "Visual Hierarchy", "Advertising Design"],
     description:
-      "Designed a high-impact Instagram advertising campaign for Puma Shoes using Canva and modern generative AI tools. Formatted for high engagement with structured visual hierarchy, athletic contrast, and conversion-focused typography.",
+      "High-impact commercial beverage poster created for Pepsi featuring dynamic ice-cube splashing, condensation texturing, bold headline typography, and brand-aligned visual storytelling.",
     highlights: [
-      "AI-driven concept ideation and creative visual generation",
-      "Created with Canva applying sport marketing design principles",
-      "Optimized for 1:1 feed posts and 9:16 Instagram story formats"
+      "Dynamic water splash and ice cube composition conveying crisp, refreshing energy",
+      "High-contrast distressed typography ('REFRESH YOUR MOOD') maximizing visual punch",
+      "Strategic brand elements: official Pepsi logo, 'Live For Now', and 'That's What I Like' slogan"
     ],
-    image: "/design_puma_ad.png",
-    badge: "Canva & AI",
+    image: "/graphic_pepsi_ad.jpg",
+    badge: "Commercial Ad",
+    aspect: "portrait",
   },
   {
-    id: "campus-promotional-posters",
-    title: "Tech Summit & Hackathon Posters",
-    type: "Event Branding & Posters",
-    tools: ["Figma", "Canva", "Typography"],
+    id: "gta6-mythpat-thumbnail",
+    title: "GTA 6 Reaction YouTube Thumbnail (Mythpat)",
+    type: "YouTube Gaming Thumbnail (16:9)",
+    tools: ["Canva", "YouTube CTR Optimization", "Color Grading", "Visual Hierarchy"],
     description:
-      "Engineered promotional posters and digital announcements for college technical events, coding summits, and student community drives featuring futuristic dark-mode aesthetics.",
+      "Engineered high-CTR gaming thumbnail for popular creator Mythpat's Grand Theft Auto VI trailer reaction. Features high-energy facial cutouts, Vice City sunset neon color grading, and layered 3D typography.",
     highlights: [
-      "High-contrast visual hierarchy prioritizing schedule, speakers, and registration",
-      "Dynamic typography pairings and clean geometric layout structures",
-      "Multi-platform export formats for Instagram, LinkedIn, and print banners"
+      "High-CTR expression cutout with reflection-matched sunglasses and rim lighting",
+      "Vice City neon synthwave color grading (pink, purple, cyan) matching GTA 6 aesthetic",
+      "Three-dimensional extruded title text, character placement, and eye-tracking visual flow"
     ],
-    image: "/design_event_poster.png",
-    badge: "Event Branding",
+    image: "/graphic_gta6_thumbnail.jpg",
+    badge: "YouTube 16:9",
+    aspect: "landscape",
   },
   {
-    id: "brand-identity-ui-kit",
-    title: "Digital Brand Identity & Asset Kit",
-    type: "Brand Design & Assets",
-    tools: ["Figma", "Canva", "Design Systems"],
+    id: "gta6-shorts-poster",
+    title: "GTA 6 'Is Here?!' Vertical Reel & Shorts Graphic",
+    type: "YouTube Shorts / Reel Cover (9:16)",
+    tools: ["Canva", "Mobile Visual Design", "Social Media Graphics", "Composition"],
     description:
-      "Comprehensive visual branding system featuring cohesive color palettes, typography scales, social media post templates, and vector iconography designed in Figma and Canva.",
+      "Optimized vertical thumbnail for mobile social media feeds (YouTube Shorts & Instagram Reels). Built to capture immediate viewer attention in under 1 second with comic-style action accents.",
     highlights: [
-      "Modern minimalist aesthetic curated for technology products",
-      "Modular social media component templates for continuous posting",
-      "Exported in high-resolution vector and raster assets"
+      "Optimized 9:16 mobile canvas with centered focal point and high-contrast yellow brush banners",
+      "Comic-style surprise lines and action callouts for maximum click-through engagement",
+      "Vibrant Vice City palm tree background with dusk sky and high-speed sports car"
     ],
-    image: "/design_brand_kit.png",
-    badge: "Design System",
+    image: "/graphic_mythpat_shorts.jpg",
+    badge: "Shorts / Reel 9:16",
+    aspect: "vertical",
   },
 ]
 

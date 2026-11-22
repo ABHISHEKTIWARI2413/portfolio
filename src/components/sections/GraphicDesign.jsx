@@ -35,20 +35,29 @@ export default function GraphicDesign() {
               >
                 <div>
                   {/* Visual Banner Preview */}
-                  <div className="relative w-full h-52 rounded-2xl bg-[#121212] border border-white/[0.08] overflow-hidden mb-6 group-hover:border-[#c9f31d]/40 transition-colors">
+                  <div className="relative w-full h-64 sm:h-72 rounded-2xl bg-[#0d0d0d] border border-white/[0.08] overflow-hidden mb-6 group-hover:border-[#c9f31d]/40 transition-colors flex items-center justify-center">
+                    {/* Blurred ambient backdrop */}
+                    <img
+                      src={design.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover blur-xl opacity-25 scale-110 pointer-events-none"
+                    />
+
+                    {/* Main crisp preview */}
                     <img
                       src={design.image}
                       alt={design.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="relative z-10 max-h-full max-w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                     />
 
                     {/* Number Overlay */}
-                    <div className="absolute top-3 left-3 font-['Urbanist'] font-black text-xl text-[#c9f31d] bg-[#0c0c0c]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
+                    <div className="absolute top-3 left-3 z-20 font-['Urbanist'] font-black text-xl text-[#c9f31d] bg-[#0c0c0c]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
                       {number}
                     </div>
 
                     {/* Tool Badge */}
-                    <div className="absolute top-3 right-3">
+                    <div className="absolute top-3 right-3 z-20">
                       <Badge variant="lime" size="sm">
                         <Sparkles className="w-3 h-3 mr-1" />
                         {design.badge}
@@ -59,10 +68,10 @@ export default function GraphicDesign() {
                     <button
                       type="button"
                       onClick={() => setSelectedDesign(design)}
-                      className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-['Urbanist'] font-bold text-sm cursor-pointer"
+                      className="absolute inset-0 z-30 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-['Urbanist'] font-bold text-sm cursor-pointer"
                     >
                       <Eye className="w-5 h-5 text-[#c9f31d]" />
-                      <span>View Details</span>
+                      <span>View Full Graphic</span>
                     </button>
                   </div>
 
@@ -140,7 +149,7 @@ export default function GraphicDesign() {
           onClick={() => setSelectedDesign(null)}
         >
           <div
-            className="relative w-full max-w-2xl rounded-3xl bg-[#141414] border border-white/10 p-6 sm:p-8 shadow-2xl overflow-hidden"
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#141414] border border-white/10 p-6 sm:p-8 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -148,17 +157,17 @@ export default function GraphicDesign() {
               type="button"
               onClick={() => setSelectedDesign(null)}
               aria-label="Close dialog"
-              className="absolute top-5 right-5 p-2 rounded-full bg-[#1c1c1c] border border-white/10 text-gray-400 hover:text-white hover:border-[#c9f31d] transition-colors cursor-pointer"
+              className="absolute top-5 right-5 z-20 p-2 rounded-full bg-[#1c1c1c] border border-white/10 text-gray-400 hover:text-white hover:border-[#c9f31d] transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {/* Modal Image */}
-            <div className="w-full h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/10 mb-6 bg-[#090909]">
+            {/* Modal Image Display */}
+            <div className="w-full max-h-[52vh] sm:max-h-[60vh] rounded-2xl overflow-hidden border border-white/10 mb-6 bg-[#090909] flex items-center justify-center p-3">
               <img
                 src={selectedDesign.image}
                 alt={selectedDesign.title}
-                className="w-full h-full object-cover"
+                className="max-h-[48vh] sm:max-h-[56vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
               />
             </div>
 

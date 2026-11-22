@@ -178,8 +178,11 @@ This document records the full development trajectory across all 10 iterations r
 - **Implemented**:
   - Added dedicated Graphic Design showcase section (`src/components/sections/GraphicDesign.jsx`).
   - Added "Designs" navigation link in sticky navbar (`#designs`).
-  - Featured Abhishek's creative projects: Puma Instagram Advertisement Campaign (Canva & AI), Campus Tech Summit Event Posters (Figma & Canva), and Digital Brand Identity & UI Kits.
-  - Included interactive preview modals, tool badges, and responsive layouts.
+  - Integrated Abhishek's authentic graphic designs:
+    1. **Pepsi • 'Refresh Your Mood' Commercial Poster** (Product manipulation, water/ice splash effects, commercial advertising layout).
+    2. **GTA 6 Reaction YouTube Thumbnail (Mythpat)** (16:9 high-CTR gaming thumbnail, Vice City synthwave neon grading, expressive cutout).
+    3. **GTA 6 'Is Here?!' Vertical Reel & Shorts Graphic** (9:16 mobile canvas, comic action callouts, high-contrast yellow brush banners).
+  - Designed interactive cards with blurred ambient backdrops, tool badges, and full-resolution uncropped modal inspections.
 
 ---
 
